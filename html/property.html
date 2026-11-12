@@ -101,6 +101,7 @@
         <ul class="subnav__list">
           <li><a href="#about">Про ЖК</a></li>
           <li><a href="#chess">Вибір квартири</a></li>
+          <li><a href="#purchase">Умови оплати</a></li>
           <li><a href="#progress">Хід будівництва</a></li>
           <li><a href="#location">Розташування</a></li>
           <li><a href="#request">Заявка</a></li>
@@ -173,6 +174,55 @@
             <div class="chess__grid" role="grid" aria-label="Квартири за поверхами"></div>
           </div>
           <p class="chess__hint muted">Натисніть на квартиру, щоб переглянути планування та ціну. 1-й поверх — комерційні приміщення.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Purchase terms -->
+    <section class="section" id="purchase" aria-labelledby="purchase-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Умови придбання</span>
+            <h2 id="purchase-title">Оберіть зручний спосіб оплати</h2>
+          </div>
+        </div>
+        <div class="pay-options">
+          <article class="pay-card">
+            <span class="pay-card__badge">Вигідніше</span>
+            <h3 class="pay-card__title">100% оплата</h3>
+            <p class="pay-card__lead">Ціна за м² фіксується в договорі та не змінюється до кінця будівництва.</p>
+            <ul class="pay-card__list">
+              <li>Фіксована вартість квартири</li>
+              <li>Знижка 5% від ціни прайсу</li>
+              <li>Можлива оплата з іпотекою банків-партнерів або «єОселя»</li>
+            </ul>
+          </article>
+          <article class="pay-card pay-card--accent on-dark">
+            <span class="pay-card__badge">Популярно</span>
+            <h3 class="pay-card__title">Розстрочка від забудовника</h3>
+            <p class="pay-card__lead">Перший внесок — від 30%. Ціна за м² фіксується на оплачену першим внеском площу.</p>
+            <ul class="pay-card__list">
+              <li>Решта площі сплачується щомісяця рівними частинами</li>
+              <li>Щомісячні платежі — за поточною ціною м² на дату оплати</li>
+              <li>Строк — до введення будинку в експлуатацію (IV кв. 2027)</li>
+              <li>Без банків, довідок про доходи та переплат за відсотки</li>
+            </ul>
+          </article>
+        </div>
+        <ul class="pay-notes">
+          <li>
+            <strong>Площа квартири</strong>
+            <span>Після завершення будівництва фактична площа може відрізнятися від проєктної в межах 1–2%. Різниця перераховується за ціною договору.</span>
+          </li>
+          <li>
+            <strong>Бронювання</strong>
+            <span>Бронь безкоштовна та діє 3 дні — за цей час ви встигнете підготувати документи до договору.</span>
+          </li>
+        </ul>
+        <div class="pay-actions">
+          <a class="btn btn--primary" href="#chess">Обрати квартиру</a>
+          <button class="btn btn--outline" type="button" data-open-contact data-project="ЖК «Надія Парк»" data-message="Прошу розрахувати графік розстрочки">Розрахувати розстрочку</button>
         </div>
       </div>
     </section>
@@ -368,6 +418,14 @@
             <div><dt>Здача</dt><dd data-apt="completion"></dd></div>
           </dl>
           <p class="apt__price"><strong data-apt="price"></strong> <span class="muted" data-apt="ppm"></span></p>
+          <div class="apt-pay">
+            <p class="apt-pay__title">Розстрочка від забудовника</p>
+            <dl class="apt-pay__list">
+              <div><dt>Перший внесок 30%</dt><dd data-apt="first"></dd></div>
+              <div><dt>Щомісяця, <span data-apt="months"></span></dt><dd data-apt="monthly"></dd></div>
+            </dl>
+            <p class="apt-pay__note">Орієнтовний розрахунок до здачі будинку. <a href="property.html#purchase">Умови оплати</a></p>
+          </div>
           <button class="btn btn--primary btn--block" type="button" data-open-contact data-apt="cta">Забронювати квартиру</button>
           <p class="apt__note muted">Бронь безкоштовна та діє 3 дні. Ціна фіксується на дату договору.</p>
         </div>

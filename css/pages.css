@@ -1308,3 +1308,165 @@ html:has(.subnav) {
 @media (min-width: 1200px) {
   .stats__list--6 .stats__value { font-size: 2.25rem; }
 }
+
+/* --------------------------------------------------------------------------
+   Purchase terms (property page)
+   -------------------------------------------------------------------------- */
+.pay-options {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .pay-options { grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+
+.pay-card {
+  position: relative;
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: 28px 24px;
+  border: 1px solid var(--navy-20);
+  border-radius: var(--radius-lg);
+}
+
+@media (min-width: 768px) {
+  .pay-card { padding: 36px; }
+}
+
+.pay-card--accent {
+  border-color: var(--navy);
+}
+
+.pay-card__badge {
+  justify-self: start;
+  padding: 4px 10px;
+  border-radius: var(--radius);
+  background: var(--navy-10);
+  color: var(--navy);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.pay-card--accent .pay-card__badge {
+  background: var(--white);
+}
+
+.pay-card__title {
+  font-size: 1.5rem;
+}
+
+.pay-card__lead {
+  font-size: var(--fs-lg);
+  font-weight: 500;
+}
+
+.pay-card__list {
+  display: grid;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--navy-10);
+}
+
+.pay-card--accent .pay-card__list {
+  border-top-color: rgba(255, 255, 255, 0.2);
+}
+
+.pay-card__list li {
+  position: relative;
+  padding-left: 26px;
+  font-size: var(--fs-sm);
+}
+
+.pay-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 6px;
+  width: 12px;
+  height: 7px;
+  border-left: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(-45deg);
+}
+
+.pay-notes {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+  .pay-notes { grid-template-columns: 1fr 1fr; gap: 24px; }
+}
+
+.pay-notes li {
+  display: grid;
+  gap: 4px;
+  padding: 16px 20px;
+  background: var(--bg-alt);
+  border-radius: var(--radius-lg);
+  font-size: var(--fs-sm);
+}
+
+.pay-notes span {
+  color: var(--text-muted);
+}
+
+.pay-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+@media (min-width: 480px) {
+  .pay-actions { flex-direction: row; flex-wrap: wrap; }
+}
+
+/* Installment estimate inside the apartment modal */
+.apt-pay {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 8px;
+  padding: 14px 16px;
+  background: var(--bg-alt);
+  border-radius: var(--radius-lg);
+}
+
+.apt-pay__title {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.apt-pay__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.apt-pay__list dt {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.apt-pay__list dd {
+  font-weight: 700;
+}
+
+.apt-pay__note {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.apt-pay__note a {
+  color: var(--navy);
+  text-decoration: underline;
+}
