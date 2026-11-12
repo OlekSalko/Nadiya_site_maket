@@ -542,7 +542,7 @@ html:has(.subnav) {
   overflow-x: auto;
   padding: 16px;
   margin-inline: calc(var(--gutter) * -1);
-  background: var(--white);
+  background: var(--bg-alt);
 }
 
 @media (min-width: 768px) {
@@ -1329,6 +1329,11 @@ html:has(.subnav) {
   padding: 28px 24px;
   border: 1px solid var(--navy-20);
   border-radius: var(--radius-lg);
+  background: var(--white);
+}
+
+.pay-card--accent {
+  background: var(--navy);
 }
 
 @media (min-width: 768px) {
@@ -1408,7 +1413,7 @@ html:has(.subnav) {
   display: grid;
   gap: 4px;
   padding: 16px 20px;
-  background: var(--bg-alt);
+  background: var(--white);
   border-radius: var(--radius-lg);
   font-size: var(--fs-sm);
 }
@@ -1469,4 +1474,49 @@ html:has(.subnav) {
 .apt-pay__note a {
   color: var(--navy);
   text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+   Technical specifications (property page)
+   -------------------------------------------------------------------------- */
+.specs {
+  display: grid;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .specs { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+}
+
+@media (min-width: 1200px) {
+  .specs { grid-template-columns: repeat(3, 1fr); }
+}
+
+.spec {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 16px;
+  align-items: start;
+  padding: 20px;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+}
+
+.spec__icon {
+  width: 48px;
+  height: 48px;
+  padding: 10px;
+  border-radius: 50%;
+  background: var(--navy-10);
+  color: var(--navy);
+}
+
+.spec__title {
+  margin-bottom: 4px;
+  font-size: var(--fs-base);
+}
+
+.spec__text {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
 }
