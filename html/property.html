@@ -17,6 +17,7 @@
   <script src="../js/chessboard.js" defer></script>
   <script src="../js/subnav.js" defer></script>
   <script src="../js/build-timeline.js" defer></script>
+  <script src="../js/monthly-gallery.js" defer></script>
 </head>
 <body class="page-property">
   <a class="skip-link" href="#main">Перейти до змісту</a>
@@ -107,6 +108,7 @@
           <li><a href="#purchase">Умови оплати</a></li>
           <li><a href="#progress">Хід будівництва</a></li>
           <li><a href="#chronicle">Фотохроніка</a></li>
+          <li><a href="#monthly">По місяцях</a></li>
           <li><a href="#location">Розташування</a></li>
           <li><a href="#request">Заявка</a></li>
         </ul>
@@ -468,8 +470,94 @@
       </div>
     </section>
 
+    <!-- Monthly construction photo reports -->
+    <section class="section" id="monthly" aria-labelledby="monthly-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Фотозвіти</span>
+            <h2 id="monthly-title">Хід будівництва по місяцях</h2>
+          </div>
+        </div>
+        <ul class="month-grid" data-month-grid>
+          <li>
+            <button class="month-card" type="button" data-photo-index="0" data-full="../assets/img/panorama.jpg" data-caption="Грудень 2025 — Завершено огородження та підготовку майданчика">
+              <img src="../assets/img/panorama.jpg" alt="Завершено огородження та підготовку майданчика" width="1280" height="720" loading="lazy">
+              <span class="month-card__label"><time datetime="2025-12">Грудень 2025</time></span>
+            </button>
+          </li>
+          <li>
+            <button class="month-card" type="button" data-photo-index="1" data-full="../assets/img/aerial-site.jpg" data-caption="Січень 2026 — Котлован і палі під фундамент">
+              <img src="../assets/img/aerial-site.jpg" alt="Котлован і палі під фундамент" width="1280" height="720" loading="lazy">
+              <span class="month-card__label"><time datetime="2026-01">Січень 2026</time></span>
+            </button>
+          </li>
+          <li>
+            <button class="month-card" type="button" data-photo-index="2" data-full="../assets/img/site-top.jpg" data-caption="Лютий 2026 — Армування фундаментної плити">
+              <img src="../assets/img/site-top.jpg" alt="Армування фундаментної плити" width="1280" height="720" loading="lazy">
+              <span class="month-card__label"><time datetime="2026-02">Лютий 2026</time></span>
+            </button>
+          </li>
+          <li>
+            <button class="month-card" type="button" data-photo-index="3" data-full="../assets/img/formwork.jpg" data-caption="Березень 2026 — Стіни підземного паркінгу">
+              <img src="../assets/img/formwork.jpg" alt="Стіни підземного паркінгу" width="1280" height="720" loading="lazy">
+              <span class="month-card__label"><time datetime="2026-03">Березень 2026</time></span>
+            </button>
+          </li>
+          <li>
+            <button class="month-card" type="button" data-photo-index="4" data-full="../assets/img/site-top.jpg" data-caption="Квітень 2026 — Перекриття паркінгу, 1-й поверх">
+              <img src="../assets/img/site-top.jpg" alt="Перекриття паркінгу, 1-й поверх" width="1280" height="720" loading="lazy">
+              <span class="month-card__label"><time datetime="2026-04">Квітень 2026</time></span>
+            </button>
+          </li>
+          <li>
+            <button class="month-card" type="button" data-photo-index="5" data-full="../assets/img/crane.jpg" data-caption="Травень 2026 — Монтаж другого баштового крана">
+              <img src="../assets/img/crane.jpg" alt="Монтаж другого баштового крана" width="1280" height="720" loading="lazy">
+              <span class="month-card__label"><time datetime="2026-05">Травень 2026</time></span>
+            </button>
+          </li>
+          <li>
+            <button class="month-card" type="button" data-photo-index="6" data-full="../assets/img/formwork.jpg" data-caption="Червень 2026 — Каркас 2–3 поверхів">
+              <img src="../assets/img/formwork.jpg" alt="Каркас 2–3 поверхів" width="1280" height="720" loading="lazy">
+              <span class="month-card__label"><time datetime="2026-06">Червень 2026</time></span>
+            </button>
+          </li>
+          <li>
+            <button class="month-card" type="button" data-photo-index="7" data-full="../assets/img/aerial-site.jpg" data-caption="Липень 2026 — Каркас 4-го поверху, старт кладки">
+              <img src="../assets/img/aerial-site.jpg" alt="Каркас 4-го поверху, старт кладки" width="1280" height="720" loading="lazy">
+              <span class="month-card__label"><time datetime="2026-07">Липень 2026</time></span>
+            </button>
+          </li>
+          <li>
+            <button class="month-card" type="button" data-photo-index="8" data-full="../assets/img/crane.jpg" data-caption="Серпень 2026 — Каркас 5–6 поверхів">
+              <img src="../assets/img/crane.jpg" alt="Каркас 5–6 поверхів" width="1280" height="720" loading="lazy">
+              <span class="month-card__label"><time datetime="2026-08">Серпень 2026</time></span>
+            </button>
+          </li>
+          <li>
+            <button class="month-card" type="button" data-photo-index="9" data-full="../assets/img/site-top.jpg" data-caption="Вересень 2026 — Каркас 7-го поверху, кладка до 4-го">
+              <img src="../assets/img/site-top.jpg" alt="Каркас 7-го поверху, кладка до 4-го" width="1280" height="720" loading="lazy">
+              <span class="month-card__label"><time datetime="2026-09">Вересень 2026</time></span>
+            </button>
+          </li>
+          <li>
+            <button class="month-card" type="button" data-photo-index="10" data-full="../assets/img/formwork.jpg" data-caption="Жовтень 2026 — Каркас 8-го поверху">
+              <img src="../assets/img/formwork.jpg" alt="Каркас 8-го поверху" width="1280" height="720" loading="lazy">
+              <span class="month-card__label"><time datetime="2026-10">Жовтень 2026</time></span>
+            </button>
+          </li>
+          <li>
+            <button class="month-card" type="button" data-photo-index="11" data-full="../assets/img/crane.jpg" data-caption="Листопад 2026 — Бетонування перекриття 9-го поверху">
+              <img src="../assets/img/crane.jpg" alt="Бетонування перекриття 9-го поверху" width="1280" height="720" loading="lazy">
+              <span class="month-card__label"><time datetime="2026-11">Листопад 2026</time></span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+
     <!-- Location -->
-    <section class="section" id="location" aria-labelledby="location-title">
+    <section class="section section--alt" id="location" aria-labelledby="location-title">
       <div class="container location">
         <div class="location__text">
           <span class="eyebrow">Розташування</span>
@@ -515,7 +603,7 @@
     </section>
 
     <!-- Request form -->
-    <section class="section section--alt cta" id="request" aria-labelledby="request-title">
+    <section class="section cta" id="request" aria-labelledby="request-title">
       <div class="container cta__inner">
         <div class="cta__text">
           <span class="eyebrow">ЖК «Надія Парк»</span>
@@ -662,6 +750,21 @@
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- Photo viewer (monthly reports) -->
+  <div class="modal modal--photo" id="photo-modal" role="dialog" aria-modal="true" aria-label="Перегляд фото" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <figure class="photo-viewer">
+      <button class="modal__close photo-viewer__close" type="button" data-close-modal aria-label="Закрити">×</button>
+      <img class="photo-viewer__img" src="../assets/img/panorama.jpg" alt="" width="1280" height="720" data-photo-img>
+      <figcaption class="photo-viewer__caption">
+        <span data-photo-caption></span>
+        <span class="photo-viewer__count" data-photo-count></span>
+      </figcaption>
+      <button class="photo-viewer__nav photo-viewer__nav--prev" type="button" data-photo-prev aria-label="Попереднє фото">‹</button>
+      <button class="photo-viewer__nav photo-viewer__nav--next" type="button" data-photo-next aria-label="Наступне фото">›</button>
+    </figure>
   </div>
 
   <!-- Contact modal -->

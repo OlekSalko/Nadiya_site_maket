@@ -1964,3 +1964,126 @@ html:has(.subnav) {
   font-size: var(--fs-sm);
   color: var(--text-muted);
 }
+
+/* --------------------------------------------------------------------------
+   Monthly construction photos (property page)
+   -------------------------------------------------------------------------- */
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .month-grid { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+}
+
+@media (min-width: 1200px) {
+  .month-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.month-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4 / 3;
+  background: var(--navy-10);
+  cursor: zoom-in;
+}
+
+.month-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.month-card:hover img {
+  transform: scale(1.06);
+}
+
+.month-card__label {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 28px 12px 10px;
+  background: linear-gradient(to top, rgba(10, 34, 62, 0.85), rgba(10, 34, 62, 0));
+  color: var(--white);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  text-align: left;
+}
+
+/* Photo viewer modal */
+.modal--photo {
+  align-items: center;
+  padding: 16px;
+}
+
+.modal--photo .modal__backdrop {
+  background: rgba(10, 34, 62, 0.88);
+}
+
+.photo-viewer {
+  position: relative;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0;
+  animation: slide-up 0.25s ease;
+}
+
+.photo-viewer__img {
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: var(--radius-lg);
+  background: var(--navy);
+}
+
+.photo-viewer__caption {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-top: 12px;
+  color: var(--white);
+  font-size: var(--fs-sm);
+}
+
+.photo-viewer__count {
+  flex-shrink: 0;
+  color: var(--navy-20);
+}
+
+.photo-viewer__close {
+  top: -52px;
+  right: -4px;
+  color: var(--white);
+}
+
+.photo-viewer__close:hover {
+  color: var(--navy-10);
+}
+
+.photo-viewer__nav {
+  position: absolute;
+  top: calc(50% - 22px);
+  width: 44px;
+  height: 44px;
+  margin-top: -22px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--navy);
+  font-size: 28px;
+  line-height: 1;
+}
+
+.photo-viewer__nav--prev { left: 8px; }
+.photo-viewer__nav--next { right: 8px; }
+
+@media (min-width: 1200px) {
+  .photo-viewer__nav--prev { left: -60px; }
+  .photo-viewer__nav--next { right: -60px; }
+}
