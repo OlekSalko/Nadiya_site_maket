@@ -66,13 +66,75 @@
       <div class="container search__layout">
         <!-- Filters -->
         <aside class="filters" id="filters" aria-label="Фільтри">
-          <!-- filled in subtask 13 -->
+          <button class="filters__toggle btn btn--primary btn--block" type="button" aria-expanded="false" aria-controls="filters-form">
+            Фільтри <span class="filters__badge" data-active-count hidden></span>
+          </button>
+          <form class="filters__form" id="filters-form" novalidate>
+            <div class="form__field">
+              <label class="form__label" for="f-project">Житловий комплекс</label>
+              <select class="form__input" id="f-project" name="project">
+                <option value="">Усі комплекси</option>
+                <option value="park">ЖК «Надія Парк»</option>
+                <option value="naberezhnyi">ЖК «Набережний»</option>
+                <option value="sonyachna">ЖК «Сонячна Гавань»</option>
+              </select>
+            </div>
+
+            <fieldset class="filters__group">
+              <legend class="form__label">Кількість кімнат</legend>
+              <div class="chips">
+                <label class="chip-check"><input type="checkbox" name="rooms" value="1"><span>1</span></label>
+                <label class="chip-check"><input type="checkbox" name="rooms" value="2"><span>2</span></label>
+                <label class="chip-check"><input type="checkbox" name="rooms" value="3"><span>3+</span></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="filters__group">
+              <legend class="form__label">Поверх</legend>
+              <div class="filters__range">
+                <input class="form__input" type="number" name="floorMin" min="1" max="24" placeholder="від" aria-label="Поверх від">
+                <span aria-hidden="true">—</span>
+                <input class="form__input" type="number" name="floorMax" min="1" max="24" placeholder="до" aria-label="Поверх до">
+              </div>
+            </fieldset>
+
+            <fieldset class="filters__group">
+              <legend class="form__label">Площа, м²</legend>
+              <div class="filters__range">
+                <input class="form__input" type="number" name="areaMin" min="30" max="110" placeholder="від" aria-label="Площа від">
+                <span aria-hidden="true">—</span>
+                <input class="form__input" type="number" name="areaMax" min="30" max="110" placeholder="до" aria-label="Площа до">
+              </div>
+            </fieldset>
+
+            <div class="form__field">
+              <label class="form__label" for="f-price">Ціна до: <output for="f-price" data-price-out>8 000 000 ₴</output></label>
+              <input class="filters__slider" id="f-price" type="range" name="priceMax" min="1000000" max="8000000" step="100000" value="8000000">
+            </div>
+
+            <label class="form__check">
+              <input type="checkbox" name="onlyFree">
+              <span>Лише вільні (без заброньованих)</span>
+            </label>
+
+            <button class="btn btn--outline btn--block" type="reset">Скинути фільтри</button>
+          </form>
         </aside>
 
         <!-- Results -->
         <div class="results">
           <div class="results__bar">
-            <p class="results__count" aria-live="polite"><strong data-count>0</strong> квартир знайдено</p>
+            <p class="results__count" aria-live="polite">Знайдено: <strong data-count>0</strong> <span data-count-word>квартир</span></p>
+            <label class="results__sort">
+              <span class="visually-hidden">Сортування</span>
+              <select class="form__input" name="sort" data-sort>
+                <option value="price-asc">Спочатку дешевші</option>
+                <option value="price-desc">Спочатку дорожчі</option>
+                <option value="area-asc">Площа: за зростанням</option>
+                <option value="area-desc">Площа: за спаданням</option>
+                <option value="floor-desc">Вищі поверхи</option>
+              </select>
+            </label>
           </div>
           <ul class="apartments-grid" data-results></ul>
           <div class="results__more">
