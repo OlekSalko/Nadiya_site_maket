@@ -132,3 +132,50 @@
 @media (max-width: 767px) {
   .hero__scroll { display: none; }
 }
+
+/* --------------------------------------------------------------------------
+   Home: stats
+   -------------------------------------------------------------------------- */
+.stats {
+  padding-block: 40px;
+  border-bottom: 1px solid var(--navy-10);
+}
+
+.stats__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 16px;
+}
+
+@media (min-width: 1024px) {
+  .stats__list { grid-template-columns: repeat(4, 1fr); }
+  .stats { padding-block: 56px; }
+}
+
+.stats__item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding-left: 16px;
+  border-left: 2px solid var(--navy);
+}
+
+.stats__value {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.stats__value small {
+  font-size: 0.5em;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .stats__value { font-size: 2.75rem; }
+}
+
+.stats__label {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}

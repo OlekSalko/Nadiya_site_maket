@@ -630,3 +630,152 @@ select.form__input {
 .on-dark .form__input { border-color: transparent; }
 .on-dark .form-success .muted { color: var(--navy-20); }
 .on-dark .form-success::before { background: var(--white); color: var(--navy); }
+
+/* Badge -------------------------------------------------------------------- */
+.badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--navy);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.badge--dark {
+  background: var(--navy);
+  color: var(--white);
+}
+
+/* Stretched link: makes the whole card clickable */
+.stretched-link::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* Project card ------------------------------------------------------------- */
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(10, 34, 62, 0.06);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.project-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-4px);
+}
+
+.project-card:focus-within {
+  box-shadow: 0 0 0 2px var(--navy);
+}
+
+.project-card__media {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--navy-10);
+}
+
+.project-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-card:hover .project-card__media img {
+  transform: scale(1.05);
+}
+
+.project-card__media .badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+
+.project-card--archive .project-card__media img {
+  filter: grayscale(0.5);
+}
+
+.project-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  padding: 20px 20px 24px;
+}
+
+.project-card__location {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.project-card__title {
+  font-size: var(--fs-h3);
+}
+
+.project-card__title a:focus-visible {
+  outline: none;
+}
+
+.project-card__facts {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--navy-10);
+}
+
+.project-card__facts dt {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.project-card__facts dd {
+  font-weight: 600;
+  font-size: var(--fs-sm);
+}
+
+/* Progress bar ------------------------------------------------------------- */
+.progress {
+  display: grid;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.progress__label {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.progress__track {
+  display: block;
+  height: 4px;
+  background: var(--navy-10);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress__bar {
+  display: block;
+  height: 100%;
+  background: var(--navy);
+}
+
+.on-dark .progress__track { background: rgba(255, 255, 255, 0.2); }
+.on-dark .progress__bar { background: var(--white); }
+.on-dark .progress__label { color: var(--navy-20); }
