@@ -274,3 +274,245 @@
 @media (min-width: 768px) {
   .cta__form { padding: 40px; margin-inline: 0; }
 }
+
+/* --------------------------------------------------------------------------
+   Property page
+   -------------------------------------------------------------------------- */
+.page-head--property {
+  padding-bottom: 96px;
+}
+
+.property-title {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.property-title h1 {
+  margin: 14px 0 8px;
+}
+
+@media (min-width: 768px) {
+  .property-title {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.property-title__price {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+@media (min-width: 768px) {
+  .property-title__price { text-align: right; }
+}
+
+.property-title__price strong {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.muted-light {
+  color: var(--navy-20);
+  font-size: var(--fs-sm);
+}
+
+/* Gallery */
+.gallery-section {
+  margin-top: -72px;
+}
+
+.gallery {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--navy-10);
+  box-shadow: var(--shadow);
+}
+
+.gallery__track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  margin: 0;
+}
+
+.gallery__track::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery__slide {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  aspect-ratio: 4 / 3;
+}
+
+@media (min-width: 768px) {
+  .gallery__slide { aspect-ratio: 16 / 7; }
+}
+
+.gallery__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery__btn {
+  position: absolute;
+  top: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  margin-top: -24px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--navy);
+  font-size: 28px;
+  line-height: 1;
+  transition: opacity var(--transition);
+}
+
+.gallery__btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.gallery__btn--prev { left: 16px; }
+.gallery__btn--next { right: 16px; }
+
+@media (min-width: 768px) {
+  .gallery__btn { display: flex; }
+}
+
+.gallery__counter {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  padding: 4px 12px;
+  border-radius: 14px;
+  background: rgba(10, 34, 62, 0.75);
+  color: var(--white);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+
+/* Sticky in-page navigation */
+.subnav {
+  position: sticky;
+  top: var(--header-h);
+  z-index: 30;
+  margin-top: 24px;
+  background: var(--white);
+  border-bottom: 1px solid var(--navy-10);
+}
+
+.subnav__list {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.subnav__list::-webkit-scrollbar {
+  display: none;
+}
+
+.subnav__list a {
+  display: block;
+  padding: 14px 0;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  white-space: nowrap;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+}
+
+.subnav__list a:hover,
+.subnav__list a.is-active {
+  color: var(--navy);
+  border-bottom-color: var(--navy);
+}
+
+html:has(.subnav) {
+  scroll-padding-top: calc(var(--header-h) + 56px);
+}
+
+/* Key facts */
+.facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid var(--navy-10);
+  border-left: 1px solid var(--navy-10);
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .facts { grid-template-columns: repeat(4, 1fr); margin-bottom: 72px; }
+}
+
+.facts__item {
+  padding: 16px;
+  border-right: 1px solid var(--navy-10);
+  border-bottom: 1px solid var(--navy-10);
+}
+
+.facts__item dt {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.facts__item dd {
+  margin-top: 4px;
+  font-weight: 700;
+}
+
+/* About */
+.about {
+  display: grid;
+  gap: 32px;
+}
+
+@media (min-width: 1024px) {
+  .about { grid-template-columns: 1.4fr 1fr; gap: 64px; }
+}
+
+.about__text h2 {
+  margin-bottom: 16px;
+}
+
+.about__text .lead {
+  margin-bottom: 16px;
+}
+
+.about__list {
+  display: grid;
+  gap: 0;
+  align-content: start;
+}
+
+.about__list li {
+  position: relative;
+  padding: 14px 0 14px 32px;
+  border-bottom: 1px solid var(--navy-10);
+  font-weight: 500;
+}
+
+.about__list li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 21px;
+  width: 14px;
+  height: 8px;
+  border-left: 2px solid var(--navy);
+  border-bottom: 2px solid var(--navy);
+  transform: rotate(-45deg);
+}

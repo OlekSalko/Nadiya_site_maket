@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/pages.css">
   <script src="../js/main.js" defer></script>
+  <script src="../js/gallery.js" defer></script>
 </head>
 <body class="page-property">
   <a class="skip-link" href="#main">Перейти до змісту</a>
@@ -46,6 +47,92 @@
   </header>
 
   <main id="main">
+    <section class="page-head page-head--property on-dark">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлібні крихти">
+          <ol>
+            <li><a href="../index.html">Головна</a></li>
+            <li><a href="properties.html">Об'єкти</a></li>
+            <li aria-current="page">ЖК «Надія Парк»</li>
+          </ol>
+        </nav>
+        <div class="property-title">
+          <div>
+            <span class="badge">Будується · Готовність 45%</span>
+            <h1>ЖК «Надія Парк»</h1>
+            <p class="page-head__text">Київ, Голосіївський р-н, вул. Паркова, 8</p>
+          </div>
+          <div class="property-title__price">
+            <span class="muted-light">Ціна від</span>
+            <strong>1 890 000 ₴</strong>
+            <span class="muted-light">42 000 ₴/м²</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery-section" aria-label="Галерея">
+      <div class="container">
+        <div class="gallery" data-gallery>
+          <ul class="gallery__track" tabindex="0" aria-label="Фото ЖК, гортайте вбік">
+            <li class="gallery__slide"><img src="../assets/img/aerial-site.jpg" alt="Вигляд на ЖК «Надія Парк» з висоти" width="1280" height="720"></li>
+            <li class="gallery__slide"><img src="../assets/img/facade.jpg" alt="Фасад секції А" width="1280" height="720" loading="lazy"></li>
+            <li class="gallery__slide"><img src="../assets/img/aerial-tower.jpg" alt="Сусідні квартали та інфраструктура" width="1280" height="720" loading="lazy"></li>
+            <li class="gallery__slide"><img src="../assets/img/panorama.jpg" alt="Панорама району" width="1280" height="720" loading="lazy"></li>
+            <li class="gallery__slide"><img src="../assets/img/site-top.jpg" alt="Будмайданчик, жовтень 2026" width="1280" height="720" loading="lazy"></li>
+          </ul>
+          <button class="gallery__btn gallery__btn--prev" type="button" aria-label="Попереднє фото">‹</button>
+          <button class="gallery__btn gallery__btn--next" type="button" aria-label="Наступне фото">›</button>
+          <span class="gallery__counter" aria-live="polite"><span data-gallery-current>1</span> / 5</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- In-page navigation -->
+    <nav class="subnav" aria-label="Розділи сторінки ЖК">
+      <div class="container">
+        <ul class="subnav__list">
+          <li><a href="#about">Про ЖК</a></li>
+          <li><a href="#chess">Вибір квартири</a></li>
+          <li><a href="#progress">Хід будівництва</a></li>
+          <li><a href="#location">Розташування</a></li>
+          <li><a href="#request">Заявка</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Key facts + description -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <dl class="facts">
+          <div class="facts__item"><dt>Клас</dt><dd>Комфорт+</dd></div>
+          <div class="facts__item"><dt>Поверховість</dt><dd>16</dd></div>
+          <div class="facts__item"><dt>Квартир</dt><dd>128</dd></div>
+          <div class="facts__item"><dt>Здача</dt><dd>IV кв. 2027</dd></div>
+          <div class="facts__item"><dt>Технологія</dt><dd>Монолітно-каркасна</dd></div>
+          <div class="facts__item"><dt>Висота стель</dt><dd>2,85 м</dd></div>
+          <div class="facts__item"><dt>Опалення</dt><dd>Індивідуальне</dd></div>
+          <div class="facts__item"><dt>Паркінг</dt><dd>Підземний, 96 м/м</dd></div>
+        </dl>
+
+        <div class="about">
+          <div class="about__text">
+            <span class="eyebrow">Про комплекс</span>
+            <h2 id="about-title">Тихий двір поруч із Голосіївським парком</h2>
+            <p class="lead">«Надія Парк» — 16-поверховий будинок на дві секції у 10 хвилинах пішки від Голосіївського парку та метро «Деміївська».</p>
+            <p>Закритий двір без автомобілів, підземний паркінг, дитячий та спортивний майданчики. На першому поверсі — комерційні приміщення для кав'ярні, аптеки й супермаркету. Кожна секція має укриття, генератор та резервне водопостачання.</p>
+          </div>
+          <ul class="about__list">
+            <li>Енергоефективні вікна та фасад з утепленням 150 мм</li>
+            <li>Безшумні ліфти Kone з виходом у паркінг</li>
+            <li>Укриття в кожній секції, генератор, автономна котельня</li>
+            <li>Закритий двір з ландшафтним дизайном</li>
+            <li>Розтермінування до 36 місяців, іпотека єОселя</li>
+          </ul>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
