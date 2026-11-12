@@ -968,15 +968,29 @@ html:has(.subnav) {
   text-decoration: underline;
 }
 
-.map--route {
-  aspect-ratio: 4 / 3;
+.contacts-layout {
+  display: grid;
+  gap: 16px;
 }
 
-@media (min-width: 768px) {
-  .map--route { aspect-ratio: 21 / 8; }
+@media (min-width: 1024px) {
+  .contacts-layout { grid-template-columns: 1fr 1fr; gap: 24px; align-items: stretch; }
 }
 
-.map--route .map__svg {
+.contact-cards {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .contact-cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+.map--contacts {
+  min-height: 300px;
+}
+
+.map--contacts .map__svg {
   position: absolute;
   inset: 0;
   width: 100%;
