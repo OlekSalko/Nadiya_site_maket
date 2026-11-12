@@ -280,7 +280,7 @@
    Property page
    -------------------------------------------------------------------------- */
 .page-head--property {
-  padding-bottom: 96px;
+  padding-bottom: 88px;
 }
 
 .property-title {
@@ -290,7 +290,7 @@
 }
 
 .property-title h1 {
-  margin: 14px 0 8px;
+  margin: 10px 0 4px;
 }
 
 @media (min-width: 768px) {
@@ -312,7 +312,7 @@
 }
 
 .property-title__price strong {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   line-height: 1.2;
 }
 

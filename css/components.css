@@ -805,27 +805,34 @@ select.form__input {
 
 /* Page head (inner pages) -------------------------------------------------- */
 .page-head {
-  padding: 32px 0 40px;
+  padding: 20px 0 24px;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--navy-10);
 }
 
 @media (min-width: 768px) {
-  .page-head { padding: 48px 0 64px; }
+  .page-head { padding: 28px 0 36px; }
 }
 
 .page-head h1 {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  font-size: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .page-head h1 { font-size: 2.25rem; }
 }
 
 .page-head__text {
   max-width: 640px;
-  color: var(--navy-20);
-  font-size: var(--fs-lg);
+  color: var(--text-muted);
+  font-size: var(--fs-base);
 }
 
 .breadcrumbs {
-  margin-bottom: 20px;
-  font-size: var(--fs-sm);
-  color: var(--navy-20);
+  margin-bottom: 12px;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
 }
 
 .breadcrumbs ol {
@@ -843,8 +850,14 @@ select.form__input {
   color: var(--navy-50);
 }
 
+.breadcrumbs [aria-current="page"] {
+  color: var(--navy);
+  font-weight: 600;
+}
+
 .breadcrumbs a:hover {
-  color: var(--white);
+  color: var(--navy);
+  text-decoration: underline;
 }
 
 /* Tabs --------------------------------------------------------------------- */
