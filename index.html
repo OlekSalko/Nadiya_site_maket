@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Головна — Надія Девелопмент</title>
+  <meta name="description" content="Надія Девелопмент — будівництво житлових комплексів, продаж квартир від забудовника.">
+  <meta name="theme-color" content="#0a223e">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/pages.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/home.js" defer></script>
+</head>
+<body class="page-home">
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="index.html">
+        <img src="assets/img/logo.svg" alt="Надія — на головну" width="301" height="122">
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Головне меню">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="index.html" aria-current="page">Головна</a></li>
+          <li><a class="main-nav__link" href="html/properties.html">Об'єкти</a></li>
+          <li><a class="main-nav__link" href="html/apartments.html">Вибір квартири</a></li>
+          <li><a class="main-nav__link" href="html/contacts.html">Контакти</a></li>
+        </ul>
+        <div class="main-nav__extra">
+          <a class="main-nav__phone" href="tel:+380441234567">+38 (044) 123-45-67</a>
+          <p class="main-nav__hours">Пн–Сб, 9:00–19:00</p>
+          <button class="btn btn--light btn--block" type="button" data-open-contact>Залишити заявку</button>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="header-phone" href="tel:+380441234567">+38 (044) 123-45-67</a>
+        <button class="btn btn--outline-light btn--sm header-cta" type="button" data-open-contact>Зв'язатися</button>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Відкрити меню">
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero with presentation video -->
+    <section class="hero on-dark" aria-label="Про компанію">
+      <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="assets/img/aerial-tower.jpg" aria-hidden="true">
+        <source src="assets/video/presentation.mp4" type="video/mp4">
+      </video>
+      <div class="hero__overlay"></div>
+      <div class="container hero__content">
+        <span class="eyebrow">Забудовник з 2010 року</span>
+        <h1 class="hero__title">Будуємо надію<br> на ваш новий дім</h1>
+        <p class="hero__text">Квартири від забудовника в житлових комплексах Києва та області. Фіксована ціна на етапі будівництва, розтермінування до 36 місяців.</p>
+        <div class="hero__actions">
+          <a class="btn btn--light" href="html/apartments.html">Обрати квартиру</a>
+          <button class="btn btn--outline-light" type="button" data-open-contact>Консультація</button>
+        </div>
+      </div>
+      <button class="hero__toggle" type="button" aria-pressed="false" aria-label="Пауза відео">
+        <span class="hero__toggle-icon" aria-hidden="true"></span>
+      </button>
+      <a class="hero__scroll" href="#stats" aria-label="Гортати далі"></a>
+    </section>
+
+    <!-- Company in numbers -->
+    <section class="section stats" id="stats" aria-labelledby="stats-title">
+      <div class="container">
+        <h2 class="visually-hidden" id="stats-title">Компанія в цифрах</h2>
+        <ul class="stats__list">
+          <li class="stats__item"><span class="stats__value">16</span><span class="stats__label">років на ринку</span></li>
+          <li class="stats__item"><span class="stats__value">24</span><span class="stats__label">зданих будинки</span></li>
+          <li class="stats__item"><span class="stats__value">380<small> тис.</small></span><span class="stats__label">м² введено в експлуатацію</span></li>
+          <li class="stats__item"><span class="stats__value">5 200+</span><span class="stats__label">родин уже вдома</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Current projects -->
+    <section class="section section--alt" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">У продажу</span>
+            <h2 id="projects-title">Актуальні проєкти</h2>
+          </div>
+          <a class="link-arrow" href="html/properties.html">Усі об'єкти</a>
+        </div>
+        <div class="grid grid--3">
+          <article class="project-card">
+            <div class="project-card__media">
+              <img src="assets/img/aerial-site.jpg" alt="" width="1280" height="720" loading="lazy">
+              <span class="badge">Будується</span>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__location">Київ, Голосіївський р-н</p>
+              <h3 class="project-card__title"><a class="stretched-link" href="html/property.html">ЖК «Надія Парк»</a></h3>
+              <dl class="project-card__facts"><div><dt>Здача</dt><dd>IV кв. 2027</dd></div><div><dt>Поверхів</dt><dd>16</dd></div><div><dt>Ціна від</dt><dd>42 000 ₴/м²</dd></div></dl>
+            <div class="progress" role="img" aria-label="Готовність будівництва 45%">
+              <span class="progress__label"><span>Готовність</span><span>45%</span></span>
+              <span class="progress__track"><span class="progress__bar" style="width: 45%"></span></span>
+            </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__media">
+              <img src="assets/img/facade.jpg" alt="" width="1280" height="720" loading="lazy">
+              <span class="badge">Старт продажу 2-ї черги</span>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__location">Київ, Оболонський р-н</p>
+              <h3 class="project-card__title"><a class="stretched-link" href="html/property.html">ЖК «Набережний»</a></h3>
+              <dl class="project-card__facts"><div><dt>Здача</dt><dd>II кв. 2027</dd></div><div><dt>Поверхів</dt><dd>24</dd></div><div><dt>Ціна від</dt><dd>58 000 ₴/м²</dd></div></dl>
+            <div class="progress" role="img" aria-label="Готовність будівництва 70%">
+              <span class="progress__label"><span>Готовність</span><span>70%</span></span>
+              <span class="progress__track"><span class="progress__bar" style="width: 70%"></span></span>
+            </div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-card__media">
+              <img src="assets/img/site-top.jpg" alt="" width="1280" height="720" loading="lazy">
+              <span class="badge">Котлован</span>
+            </div>
+            <div class="project-card__body">
+              <p class="project-card__location">Бровари, вул. Сонячна</p>
+              <h3 class="project-card__title"><a class="stretched-link" href="html/property.html">ЖК «Сонячна Гавань»</a></h3>
+              <dl class="project-card__facts"><div><dt>Здача</dt><dd>III кв. 2028</dd></div><div><dt>Поверхів</dt><dd>10</dd></div><div><dt>Ціна від</dt><dd>31 000 ₴/м²</dd></div></dl>
+            <div class="progress" role="img" aria-label="Готовність будівництва 15%">
+              <span class="progress__label"><span>Готовність</span><span>15%</span></span>
+              <span class="progress__track"><span class="progress__bar" style="width: 15%"></span></span>
+            </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Advantages -->
+    <section class="section" aria-labelledby="why-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Чому «Надія»</span>
+            <h2 id="why-title">Будуємо так, як для себе</h2>
+          </div>
+        </div>
+        <ul class="features grid grid--4">
+          <li class="feature">
+            <svg class="feature__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+            <h3 class="feature__title">Юридична чистота</h3>
+            <p class="feature__text">Усі дозвільні документи у відкритому доступі, договори за Законом «Про гарантування речових прав».</p>
+          </li>
+          <li class="feature">
+            <svg class="feature__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="1"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M8 14h3v3H8z"/></svg>
+            <h3 class="feature__title">Здаємо вчасно</h3>
+            <p class="feature__text">24 будинки введено в експлуатацію без зриву строків — навіть у складні роки.</p>
+          </li>
+          <li class="feature">
+            <svg class="feature__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 7l12-4v4"/><circle cx="16.5" cy="13.5" r="1.2"/></svg>
+            <h3 class="feature__title">Гнучка оплата</h3>
+            <p class="feature__text">Розтермінування до 36 місяців без переплат, іпотека від банків-партнерів, єОселя.</p>
+          </li>
+          <li class="feature">
+            <svg class="feature__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-6"/><path d="M12 3l6 8h-3l4 5H5l4-5H6z"/></svg>
+            <h3 class="feature__title">Продумане середовище</h3>
+            <p class="feature__text">Закриті двори без машин, дитячі майданчики, укриття та комерція на перших поверхах.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Construction progress -->
+    <section class="section section--dark" aria-labelledby="progress-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Звіт за жовтень 2026</span>
+            <h2 id="progress-title">Хід будівництва</h2>
+          </div>
+          <a class="link-arrow" href="html/property.html#progress">Детальніше по ЖК</a>
+        </div>
+        <div class="progress-gallery">
+          <figure class="progress-gallery__item progress-gallery__item--main">
+            <img src="assets/img/aerial-site.jpg" alt="Будмайданчик ЖК «Надія Парк» з висоти" width="1280" height="720" loading="lazy">
+            <figcaption>ЖК «Надія Парк» — монолітний каркас 9-го поверху</figcaption>
+          </figure>
+          <figure class="progress-gallery__item">
+            <img src="assets/img/crane.jpg" alt="Монтаж опалубки краном" width="1280" height="720" loading="lazy">
+            <figcaption>Монтаж опалубки</figcaption>
+          </figure>
+          <figure class="progress-gallery__item">
+            <img src="assets/img/formwork.jpg" alt="Армування колон" width="1280" height="720" loading="lazy">
+            <figcaption>Армування колон</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA with form -->
+    <section class="section cta" aria-labelledby="cta-title">
+      <div class="container cta__inner">
+        <div class="cta__text">
+          <span class="eyebrow">Безкоштовна консультація</span>
+          <h2 id="cta-title">Підберемо квартиру під ваш бюджет</h2>
+          <p class="lead">Розкажемо про актуальні акції, розрахуємо розтермінування та запишемо на екскурсію будмайданчиком.</p>
+          <ul class="cta__points">
+            <li>Відповідь протягом 15 хвилин</li>
+            <li>Без нав'язливих дзвінків</li>
+            <li>Екскурсії будмайданчиком за записом</li>
+          </ul>
+        </div>
+        <div class="cta__form on-dark">
+          <form class="form js-contact-form" novalidate>
+            <div class="form__field">
+              <label class="form__label" for="cta-name">Ваше ім'я</label>
+              <input class="form__input" id="cta-name" name="name" type="text" autocomplete="name" required placeholder="Олена">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="cta-phone">Телефон</label>
+              <input class="form__input" id="cta-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__">
+            </div>
+            <label class="form__check">
+              <input type="checkbox" name="agree" required checked>
+              <span>Погоджуюсь на обробку персональних даних</span>
+            </label>
+            <button class="btn btn--light btn--block" type="submit">Отримати консультацію</button>
+          </form>
+          <div class="form-success" hidden>
+            <p class="form-success__title">Дякуємо!</p>
+            <p class="muted">Заявку отримано. Ми зателефонуємо найближчим часом.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="logo logo--footer" href="index.html">
+            <img src="assets/img/logo.svg" alt="Надія" width="301" height="122" loading="lazy">
+          </a>
+          <p>Будуємо житло, в якому хочеться жити. Понад 15 років на ринку, 24 зданих будинки.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Навігація</h2>
+          <ul class="site-footer__list">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="html/properties.html">Об'єкти</a></li>
+            <li><a href="html/apartments.html">Вибір квартири</a></li>
+            <li><a href="html/contacts.html">Контакти</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Відділ продажу</h2>
+          <ul class="site-footer__list">
+            <li><a href="tel:+380441234567">+38 (044) 123-45-67</a></li>
+            <li><a href="mailto:sales@nadiya.example">sales@nadiya.example</a></li>
+            <li>м. Київ, вул. Набережна, 12</li>
+            <li>Пн–Сб, 9:00–19:00</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Ми в соцмережах</h2>
+          <ul class="site-footer__social">
+            <li><a href="#" aria-label="Facebook">Fb</a></li>
+            <li><a href="#" aria-label="Instagram">Ig</a></li>
+            <li><a href="#" aria-label="YouTube">Yt</a></li>
+            <li><a href="#" aria-label="Telegram">Tg</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 ТОВ «Надія Девелопмент». Усі права захищено.</p>
+        <p>Інформація на сайті не є публічною офертою.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick-access contact button (every page) -->
+  <button class="fab" type="button" data-open-contact aria-label="Зв'язатися з відділом продажу">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+    <span class="fab__label">Зв'язатися</span>
+  </button>
+
+  <!-- Contact modal -->
+  <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрити">×</button>
+      <span class="eyebrow">Відділ продажу</span>
+      <h2 class="modal__title" id="contact-modal-title">Залиште заявку</h2>
+      <p class="muted modal__text">Менеджер зателефонує протягом 15 хвилин у робочий час і відповість на всі запитання.</p>
+      <form class="form js-contact-form" novalidate>
+        <div class="form__field">
+          <label class="form__label" for="cm-name">Ваше ім'я</label>
+          <input class="form__input" id="cm-name" name="name" type="text" autocomplete="name" required placeholder="Олена">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="cm-phone">Телефон</label>
+          <input class="form__input" id="cm-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="cm-project">Житловий комплекс</label>
+          <select class="form__input" id="cm-project" name="project">
+            <option value="">Ще не визначився</option>
+            <option>ЖК «Надія Парк»</option>
+            <option>ЖК «Набережний»</option>
+            <option>ЖК «Сонячна Гавань»</option>
+          </select>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="cm-message">Коментар</label>
+          <textarea class="form__input" id="cm-message" name="message" rows="3" placeholder="Наприклад: цікавить 2-кімнатна до 3 млн грн"></textarea>
+        </div>
+        <label class="form__check">
+          <input type="checkbox" name="agree" required checked>
+          <span>Погоджуюсь на обробку персональних даних</span>
+        </label>
+        <button class="btn btn--primary btn--block" type="submit">Надіслати заявку</button>
+      </form>
+      <div class="form-success" hidden>
+        <p class="form-success__title">Дякуємо!</p>
+        <p class="muted">Заявку отримано. Ми зателефонуємо найближчим часом.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

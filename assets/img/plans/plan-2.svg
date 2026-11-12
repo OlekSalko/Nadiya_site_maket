@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 240" font-family="system-ui, sans-serif" font-size="11" fill="#0a223e">
+  <rect width="320" height="240" fill="#fff"/>
+  <rect x="12" y="12" width="296" height="216" fill="#f3f4f6" stroke="#0a223e" stroke-width="4"/>
+  <g stroke="#0a223e" stroke-width="3" fill="none">
+    <path d="M120 12v60M120 100v40"/>
+    <path d="M220 12v60M220 100v128"/>
+    <path d="M12 140h80M120 140h20M168 140h52"/>
+    <path d="M80 140v88"/>
+  </g>
+  <rect x="14" y="142" width="64" height="84" fill="#e7e9ec"/>
+  <text x="66" y="72" text-anchor="middle" font-weight="600">Спальня</text>
+  <text x="66" y="88" text-anchor="middle" fill="#4a5d73">12,8 м²</text>
+  <text x="170" y="64" text-anchor="middle" font-weight="600">Кухня-вітальня</text>
+  <text x="170" y="80" text-anchor="middle" fill="#4a5d73">21,4 м²</text>
+  <text x="264" y="112" text-anchor="middle" font-weight="600">Спальня</text>
+  <text x="264" y="128" text-anchor="middle" fill="#4a5d73">14,1 м²</text>
+  <text x="46" y="182" text-anchor="middle" font-weight="600">С/в</text>
+  <text x="46" y="198" text-anchor="middle" fill="#4a5d73">5,2 м²</text>
+  <text x="150" y="188" text-anchor="middle" font-weight="600">Передпокій</text>
+  <text x="150" y="204" text-anchor="middle" fill="#4a5d73">8,3 м²</text>
+</svg>
