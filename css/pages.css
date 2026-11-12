@@ -516,3 +516,111 @@ html:has(.subnav) {
   border-bottom: 2px solid var(--navy);
   transform: rotate(-45deg);
 }
+
+/* Chessboard --------------------------------------------------------------- */
+.chess {
+  display: grid;
+  gap: 20px;
+}
+
+.chess__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .chess__controls { flex-direction: row; justify-content: space-between; }
+}
+
+.chess__summary {
+  font-weight: 600;
+}
+
+.chess__scroll {
+  overflow-x: auto;
+  padding: 16px;
+  margin-inline: calc(var(--gutter) * -1);
+  background: var(--white);
+}
+
+@media (min-width: 768px) {
+  .chess__scroll { margin-inline: 0; padding: 24px; border-radius: var(--radius-lg); }
+}
+
+.chess__grid {
+  --cols: 4;
+  display: grid;
+  gap: 6px;
+  min-width: max-content;
+}
+
+.chess__row {
+  display: grid;
+  grid-template-columns: 32px repeat(var(--cols), minmax(62px, 1fr));
+  gap: 6px;
+}
+
+@media (min-width: 768px) {
+  .chess__row { grid-template-columns: 40px repeat(var(--cols), minmax(96px, 140px)); }
+}
+
+.chess__floor {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 6px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.chess__cell {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+  height: 40px;
+  padding: 0 8px;
+  border-radius: var(--radius);
+  font-size: var(--fs-xs);
+  line-height: 1;
+  transition: transform var(--transition), opacity var(--transition), box-shadow var(--transition);
+}
+
+.chess__cell--free {
+  background: var(--status-free);
+  color: var(--white);
+}
+
+.chess__cell--reserved {
+  background: var(--status-reserved);
+  color: var(--white);
+}
+
+.chess__cell--sold {
+  background: var(--status-sold);
+  color: var(--navy-50);
+  cursor: not-allowed;
+}
+
+.chess__cell:not(:disabled):hover {
+  transform: scale(1.06);
+  box-shadow: 0 4px 12px rgba(10, 34, 62, 0.3);
+}
+
+.chess__cell.is-dimmed {
+  opacity: 0.18;
+}
+
+.chess__rooms {
+  font-weight: 700;
+}
+
+.chess__area {
+  opacity: 0.8;
+}
+
+.chess__hint {
+  font-size: var(--fs-sm);
+}

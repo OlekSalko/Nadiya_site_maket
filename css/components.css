@@ -903,3 +903,142 @@ select.form__input {
 .tabs__panel:focus-visible {
   outline-offset: 8px;
 }
+
+/* Chips (toggle buttons) --------------------------------------------------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  min-height: 40px;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--white);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.chip:hover {
+  border-color: var(--navy);
+}
+
+.chip[aria-pressed="true"] {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+/* Apartment status label --------------------------------------------------- */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.status::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: currentColor;
+}
+
+.status--free { color: var(--navy); }
+.status--reserved { color: var(--navy-50); }
+.status--sold { color: var(--navy-50); }
+.status--sold::before { background: var(--status-sold); border: 1px solid var(--navy-50); }
+
+/* Legend */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend__dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.legend__dot--free { background: var(--status-free); }
+.legend__dot--reserved { background: var(--status-reserved); }
+.legend__dot--sold { background: var(--status-sold); border: 1px solid var(--navy-20); }
+
+/* Apartment details (modal content) ---------------------------------------- */
+.apt {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .apt { grid-template-columns: 1.1fr 1fr; align-items: center; gap: 32px; }
+}
+
+.apt__plan {
+  padding: 12px;
+  border: 1px solid var(--navy-10);
+  border-radius: var(--radius-lg);
+}
+
+.apt__plan img {
+  width: 100%;
+}
+
+.apt__info {
+  display: grid;
+  gap: 8px;
+}
+
+.apt__title {
+  font-size: var(--fs-h3);
+}
+
+.apt__facts {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 12px 0;
+  padding: 16px 0;
+  border-top: 1px solid var(--navy-10);
+  border-bottom: 1px solid var(--navy-10);
+}
+
+.apt__facts dt {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.apt__facts dd {
+  font-weight: 600;
+}
+
+.apt__price {
+  margin-bottom: 8px;
+}
+
+.apt__price strong {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+
+.apt__note {
+  font-size: var(--fs-xs);
+  text-align: center;
+}

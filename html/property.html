@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="../css/pages.css">
   <script src="../js/main.js" defer></script>
   <script src="../js/gallery.js" defer></script>
+  <script src="../js/data.js" defer></script>
+  <script src="../js/apartment-modal.js" defer></script>
+  <script src="../js/chessboard.js" defer></script>
 </head>
 <body class="page-property">
   <a class="skip-link" href="#main">Перейти до змісту</a>
@@ -64,7 +67,7 @@
           </div>
           <div class="property-title__price">
             <span class="muted-light">Ціна від</span>
-            <strong>1 890 000 ₴</strong>
+            <strong>1 617 000 ₴</strong>
             <span class="muted-light">42 000 ₴/м²</span>
           </div>
         </div>
@@ -108,7 +111,7 @@
         <dl class="facts">
           <div class="facts__item"><dt>Клас</dt><dd>Комфорт+</dd></div>
           <div class="facts__item"><dt>Поверховість</dt><dd>16</dd></div>
-          <div class="facts__item"><dt>Квартир</dt><dd>128</dd></div>
+          <div class="facts__item"><dt>Квартир</dt><dd>120</dd></div>
           <div class="facts__item"><dt>Здача</dt><dd>IV кв. 2027</dd></div>
           <div class="facts__item"><dt>Технологія</dt><dd>Монолітно-каркасна</dd></div>
           <div class="facts__item"><dt>Висота стель</dt><dd>2,85 м</dd></div>
@@ -130,6 +133,43 @@
             <li>Закритий двір з ландшафтним дизайном</li>
             <li>Розтермінування до 36 місяців, іпотека єОселя</li>
           </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Apartment chessboard -->
+    <section class="section section--alt" id="chess" aria-labelledby="chess-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Шахматка</span>
+            <h2 id="chess-title">Оберіть квартиру</h2>
+          </div>
+          <a class="link-arrow" href="apartments.html?project=park">Пошук за параметрами</a>
+        </div>
+
+        <div class="chess" data-chessboard="park">
+          <div class="chess__controls">
+            <div class="chips chess__sections" aria-label="Секція"></div>
+            <div class="chips" role="group" aria-label="Кількість кімнат">
+              <button class="chip" type="button" data-rooms="all" aria-pressed="true">Усі</button>
+              <button class="chip" type="button" data-rooms="1" aria-pressed="false">1к</button>
+              <button class="chip" type="button" data-rooms="2" aria-pressed="false">2к</button>
+              <button class="chip" type="button" data-rooms="3" aria-pressed="false">3к+</button>
+            </div>
+          </div>
+
+          <ul class="legend" aria-label="Позначення">
+            <li><span class="legend__dot legend__dot--free"></span>Вільна</li>
+            <li><span class="legend__dot legend__dot--reserved"></span>Заброньована</li>
+            <li><span class="legend__dot legend__dot--sold"></span>Продана</li>
+          </ul>
+
+          <p class="chess__summary" aria-live="polite"></p>
+          <div class="chess__scroll">
+            <div class="chess__grid" role="grid" aria-label="Квартири за поверхами"></div>
+          </div>
+          <p class="chess__hint muted">Натисніть на квартиру, щоб переглянути планування та ціну. 1-й поверх — комерційні приміщення.</p>
         </div>
       </div>
     </section>
@@ -184,6 +224,33 @@
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
     <span class="fab__label">Зв'язатися</span>
   </button>
+
+  <!-- Apartment details modal -->
+  <div class="modal" id="apartment-modal" role="dialog" aria-modal="true" aria-labelledby="apt-title" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--wide">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрити">×</button>
+      <div class="apt">
+        <div class="apt__plan">
+          <img data-apt="plan" src="../assets/img/plans/plan-2.svg" alt="" width="320" height="240">
+        </div>
+        <div class="apt__info">
+          <span class="status" data-apt="status">Вільна</span>
+          <h2 class="apt__title" id="apt-title" data-apt="title">Квартира</h2>
+          <p class="muted" data-apt="project"></p>
+          <dl class="apt__facts">
+            <div><dt>Площа</dt><dd data-apt="area"></dd></div>
+            <div><dt>Поверх</dt><dd data-apt="floor"></dd></div>
+            <div><dt>Кімнат</dt><dd data-apt="rooms"></dd></div>
+            <div><dt>Здача</dt><dd data-apt="completion"></dd></div>
+          </dl>
+          <p class="apt__price"><strong data-apt="price"></strong> <span class="muted" data-apt="ppm"></span></p>
+          <button class="btn btn--primary btn--block" type="button" data-open-contact data-apt="cta">Забронювати квартиру</button>
+          <p class="apt__note muted">Бронь безкоштовна та діє 3 дні. Ціна фіксується на дату договору.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Contact modal -->
   <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" hidden>
