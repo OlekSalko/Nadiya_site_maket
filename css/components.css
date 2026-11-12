@@ -1042,3 +1042,9 @@ select.form__input {
   font-size: var(--fs-xs);
   text-align: center;
 }
+
+.site-footer__more {
+  color: var(--white);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
