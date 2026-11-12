@@ -2404,3 +2404,22 @@ html:has(.subnav) {
   margin-top: 12px;
   font-size: var(--fs-sm);
 }
+
+/* Property page: objects map in the location section */
+.location__map {
+  position: relative;
+}
+
+.location__map-link {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  z-index: 3;
+}
+
+@media (max-width: 767px) {
+  .location__map-link {
+    position: static;
+    margin-top: 10px;
+  }
+}
