@@ -247,17 +247,20 @@
       <h2 class="modal__title" id="contact-modal-title">Залиште заявку</h2>
       <p class="muted modal__text">Менеджер зателефонує протягом 15 хвилин у робочий час і відповість на всі запитання.</p>
       <form class="form js-contact-form" novalidate>
-        <fieldset class="filters__group request-types">
-          <legend class="form__label">Тип звернення</legend>
-          <div class="chips">
-            <label class="chip-check"><input type="radio" name="type" value="consultation" checked><span>Консультація в офісі</span></label>
-            <label class="chip-check"><input type="radio" name="type" value="callback"><span>Зворотний дзвінок</span></label>
-            <label class="chip-check"><input type="radio" name="type" value="booking"><span>Бронювання</span></label>
-            <label class="chip-check"><input type="radio" name="type" value="viewing"><span>Перегляд об'єкта</span></label>
-            <label class="chip-check"><input type="radio" name="type" value="online"><span>Онлайн-консультація</span></label>
-            <label class="chip-check"><input type="radio" name="type" value="availability"><span>Уточнити наявність</span></label>
-          </div>
-        </fieldset>
+        <div class="form__field">
+          <label class="form__label" for="cm-type">Тип звернення</label>
+          <select class="form__input" id="cm-type" name="type">
+            <option value="consultation" selected>Консультація в офісі продажу</option>
+            <option value="callback">Зворотний дзвінок</option>
+            <option value="booking">Бронювання квартири</option>
+            <option value="viewing">Перегляд об'єкта</option>
+            <option value="online">Онлайн-консультація</option>
+            <option value="availability">Уточнити наявність квартир</option>
+            <option value="employment">Працевлаштування</option>
+            <option value="contracting">Генпідряд</option>
+            <option value="supply">Постачання матеріалів</option>
+          </select>
+        </div>
         <div class="form__field">
           <label class="form__label" for="cm-name">Ваше ім'я</label>
           <input class="form__input" id="cm-name" name="name" type="text" autocomplete="name" required placeholder="Олена">
@@ -277,7 +280,7 @@
         </div>
         <div class="form__field">
           <label class="form__label" for="cm-message">Коментар</label>
-          <textarea class="form__input" id="cm-message" name="message" rows="3" placeholder="Наприклад: цікавить 2-кімнатна до 3 млн грн"></textarea>
+          <textarea class="form__input" id="cm-message" name="message" rows="3" placeholder="Ваше запитання або побажання"></textarea>
         </div>
         <label class="form__check">
           <input type="checkbox" name="agree" required checked>

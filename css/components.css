@@ -1070,15 +1070,3 @@ select.form__input {
   font-size: var(--fs-xs);
   text-align: center;
 }
-
-
-/* Request type chips in contact forms */
-.request-types .chips {
-  gap: 6px;
-}
-
-.request-types .chip-check span {
-  min-height: 36px;
-  padding: 6px 12px;
-  font-size: var(--fs-xs);
-}
