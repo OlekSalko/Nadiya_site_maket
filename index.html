@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages.css">
   <script src="js/main.js" defer></script>
+  <script src="js/objects-map.js" defer></script>
 </head>
 <body class="page-home">
   <a class="skip-link" href="#main">Перейти до змісту</a>
@@ -241,8 +242,34 @@
       </div>
     </section>
 
+    <!-- Objects map -->
+    <section class="section section--alt" id="map" aria-labelledby="map-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Географія</span>
+            <h2 id="map-title">Наші об'єкти на карті</h2>
+          </div>
+          <a class="link-arrow" href="html/properties.html">Усі об'єкти</a>
+        </div>
+        <div class="map-filters" role="group" aria-label="Показати на карті">
+          <button class="chip map-filter" type="button" data-map-filter="sale" aria-pressed="true">
+            <span class="map-filter__mark map-filter__mark--sale" aria-hidden="true"></span>Житлова у продажу <span class="map-filter__count" data-map-count></span>
+          </button>
+          <button class="chip map-filter" type="button" data-map-filter="done" aria-pressed="true">
+            <span class="map-filter__mark map-filter__mark--done" aria-hidden="true"></span>Житлова реалізована <span class="map-filter__count" data-map-count></span>
+          </button>
+          <button class="chip map-filter" type="button" data-map-filter="commercial" aria-pressed="true">
+            <span class="map-filter__mark map-filter__mark--commercial" aria-hidden="true"></span>Комерційна <span class="map-filter__count" data-map-count></span>
+          </button>
+        </div>
+        <div class="objects-map" data-objects-map data-root=""></div>
+        <p class="map-note muted">Схема не в масштабі. Натисніть на маркер, щоб побачити інформацію про об'єкт.</p>
+      </div>
+    </section>
+
     <!-- Social media: promotions and news -->
-    <section class="section section--alt" aria-labelledby="social-title">
+    <section class="section" aria-labelledby="social-title">
       <div class="container">
         <div class="section__head">
           <div>
@@ -329,7 +356,7 @@
     </section>
 
     <!-- CTA with form -->
-    <section class="section cta" aria-labelledby="cta-title">
+    <section class="section section--alt cta" aria-labelledby="cta-title">
       <div class="container cta__inner">
         <div class="cta__text">
           <span class="eyebrow">Безкоштовна консультація</span>

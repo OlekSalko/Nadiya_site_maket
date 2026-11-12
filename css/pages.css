@@ -1861,6 +1861,7 @@ html:has(.subnav) {
 }
 
 .social-card {
+  border: 1px solid var(--navy-10);
   display: grid;
   grid-template-columns: 40px 1fr;
   grid-template-rows: 1fr auto; /* keep the buttons on one line across cards */
@@ -1914,6 +1915,7 @@ html:has(.subnav) {
 .post-card {
   position: relative;
   overflow: hidden;
+  border: 1px solid var(--navy-10);
   background: var(--white);
   border-radius: var(--radius-lg);
   transition: box-shadow var(--transition), transform var(--transition);
@@ -2093,20 +2095,23 @@ html:has(.subnav) {
    -------------------------------------------------------------------------- */
 .objects-map {
   position: relative;
-  overflow: hidden;
-  border-radius: var(--radius-lg);
-  background: #eef0f3;
 }
 
 .objects-map__img {
   display: block;
   width: 100%;
   height: auto;
+  border-radius: var(--radius-lg);
+  background: #eef0f3;
 }
 
+/* Marker layer covers exactly the map image (popup may sit below it on phones) */
 .objects-map__layer {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  aspect-ratio: 1000 / 640;
 }
 
 /* Markers ---------------------------------------------------------------- */
@@ -2268,7 +2273,7 @@ html:has(.subnav) {
 .map-popup.is-below.is-left { transform: translate(-24px, 22px); }
 .map-popup.is-below.is-right { transform: translate(calc(-100% + 24px), 22px); }
 
-/* Phones: pin the popup to the bottom of the map so it never overflows */
+/* Phones: show the popup under the map instead of covering it */
 @media (max-width: 599px) {
   .map-popup,
   .map-popup.is-below,
@@ -2276,12 +2281,13 @@ html:has(.subnav) {
   .map-popup.is-right,
   .map-popup.is-below.is-left,
   .map-popup.is-below.is-right {
-    left: 8px !important;
-    right: 8px;
+    position: relative;
+    left: auto !important;
     top: auto !important;
-    bottom: 8px;
     width: auto;
+    margin-top: 10px;
     transform: none;
+    box-shadow: 0 4px 16px rgba(10, 34, 62, 0.16);
   }
 }
 
@@ -2392,4 +2398,9 @@ html:has(.subnav) {
 
 @media (prefers-reduced-motion: reduce) {
   .map-marker--active::after { animation: none; }
+}
+
+.map-note {
+  margin-top: 12px;
+  font-size: var(--fs-sm);
 }
