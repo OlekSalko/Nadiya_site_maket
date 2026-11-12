@@ -1468,14 +1468,14 @@ html:has(.subnav) {
 .promo {
   position: relative;
   overflow: hidden;
-  padding-block: 48px;
+  padding-block: 36px;
   background:
     linear-gradient(105deg, rgba(10, 34, 62, 0.97) 40%, rgba(10, 34, 62, 0.8)),
     url("../assets/img/facade.jpg") center / cover no-repeat;
 }
 
 @media (min-width: 768px) {
-  .promo { padding-block: 64px; }
+  .promo { padding-block: 48px; }
 }
 
 .promo__inner {
