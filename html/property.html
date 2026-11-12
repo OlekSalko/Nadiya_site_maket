@@ -18,6 +18,7 @@
   <script src="../js/subnav.js" defer></script>
   <script src="../js/build-timeline.js" defer></script>
   <script src="../js/monthly-gallery.js" defer></script>
+  <script src="../js/objects-map.js" defer></script>
 </head>
 <body class="page-property">
   <a class="skip-link" href="#main">Перейти до змісту</a>
@@ -571,33 +572,9 @@
             <li><span>Центр міста</span><span>20 хв авто</span></li>
           </ul>
         </div>
-        <div class="map">
-          <svg class="map__svg" viewBox="0 0 600 400" role="img" aria-label="Схема розташування ЖК «Надія Парк»">
-              <rect width="600" height="400" fill="#e7e9ec"/>
-              <path d="M0 260 C120 240 200 300 330 280 S520 230 600 250 L600 400 L0 400Z" fill="#ced3d8"/>
-              <rect x="360" y="40" width="200" height="150" rx="16" fill="#ced3d8"/>
-              <text x="460" y="120" text-anchor="middle" font-size="14" fill="#4a5d73" font-family="system-ui, sans-serif">Голосіївський парк</text>
-              <g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round">
-                <path d="M0 200 H600"/>
-                <path d="M300 0 V400"/>
-                <path d="M80 0 L200 400"/>
-              </g>
-              <g stroke="#fff" stroke-width="6" fill="none">
-                <path d="M0 90 H300"/>
-                <path d="M300 330 H600"/>
-                <path d="M450 200 V400"/>
-              </g>
-              <circle cx="120" cy="200" r="12" fill="#0a223e"/>
-              <text x="120" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="system-ui, sans-serif">М</text>
-              <text x="120" y="232" text-anchor="middle" font-size="12" fill="#0a223e" font-family="system-ui, sans-serif">Деміївська</text>
-              <g transform="translate(330 150)">
-                <circle r="34" fill="#0a223e" opacity="0.15"/>
-                <path d="M0 -38 C-16 -38 -26 -26 -26 -12 C-26 6 0 26 0 26 C0 26 26 6 26 -12 C26 -26 16 -38 0 -38Z" fill="#0a223e" transform="translate(0 -8)"/>
-                <circle cy="-20" r="8" fill="#fff"/>
-              </g>
-              <text x="372" y="160" font-size="14" font-weight="700" fill="#0a223e" font-family="system-ui, sans-serif">ЖК «Надія Парк»</text>
-            </svg>
-          <a class="map__link btn btn--light btn--sm" href="https://maps.google.com/?q=50.4,30.52" target="_blank" rel="noopener">Відкрити на карті</a>
+        <div class="location__map">
+          <div class="objects-map" data-objects-map data-root="../" data-active="park"></div>
+          <a class="map__link btn btn--light btn--sm location__map-link" href="https://maps.google.com/?q=50.4,30.52" target="_blank" rel="noopener">Відкрити на карті</a>
         </div>
       </div>
     </section>
