@@ -1535,132 +1535,48 @@ html:has(.subnav) {
 /* --------------------------------------------------------------------------
    Cooperation page
    -------------------------------------------------------------------------- */
-.coop-intro {
+.coop__inner {
   display: grid;
-  gap: 8px;
-  max-width: 720px;
-  margin-bottom: 28px;
+  gap: 24px;
+  align-items: start;
 }
 
-.vacancies {
-  display: grid;
-  gap: 16px;
+@media (min-width: 1024px) {
+  .coop__inner { grid-template-columns: 1.1fr 1fr; gap: 64px; }
 }
 
-@media (min-width: 768px) {
-  .vacancies { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (min-width: 1200px) {
-  .vacancies { grid-template-columns: repeat(3, 1fr); }
-}
-
-.vacancy {
-  display: grid;
-  align-content: start;
-  gap: 10px;
-  padding: 24px;
-  border: 1px solid var(--navy-10);
-  border-radius: var(--radius-lg);
-}
-
-.vacancy__head {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 4px 12px;
-}
-
-.vacancy__title {
-  font-size: var(--fs-lg);
-}
-
-.vacancy__salary {
-  font-weight: 700;
-  white-space: nowrap;
-}
-
-.vacancy__meta {
-  font-size: var(--fs-sm);
-  color: var(--text-muted);
-}
-
-.vacancy__list {
-  display: grid;
-  gap: 6px;
-  margin-bottom: 6px;
-  padding-left: 18px;
-  font-size: var(--fs-sm);
-}
-
-.vacancy .btn {
-  justify-self: start;
-}
-
-.coop-note {
-  margin-top: 24px;
-  padding: 16px 20px;
-  background: var(--bg-alt);
-  border-radius: var(--radius-lg);
-  font-size: var(--fs-sm);
-}
-
-.coop-note a,
-.coop-terms a {
-  text-decoration: underline;
-}
-
-.coop-grid {
-  display: grid;
-  gap: 16px;
-}
-
-@media (min-width: 768px) {
-  .coop-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (min-width: 1200px) {
-  .coop-grid { grid-template-columns: repeat(4, 1fr); }
-  .coop-grid--3 { grid-template-columns: repeat(3, 1fr); }
-}
-
-.coop-card {
-  display: grid;
-  align-content: start;
-  gap: 6px;
-  padding: 20px;
-  background: var(--bg-alt);
-  border-radius: var(--radius-lg);
-}
-
-.coop-card__title {
-  font-size: var(--fs-base);
-}
-
-.coop-card__text {
-  font-size: var(--fs-sm);
-  color: var(--text-muted);
-}
-
-.coop-terms {
+.coop__text {
   display: grid;
   gap: 12px;
-  max-width: 720px;
-  margin-top: 32px;
 }
 
-.coop-terms .pay-card__list {
-  margin: 0;
-  padding-top: 0;
-  border: 0;
-}
-
-.coop-terms .btn {
+.coop__text .btn {
   justify-self: start;
   margin-top: 8px;
 }
 
-.property-title__address {
-  color: var(--text-muted);
+.coop__list {
+  display: grid;
+  gap: 8px;
+}
+
+.coop__list li {
+  position: relative;
+  padding: 14px 16px 14px 44px;
+  border: 1px solid var(--navy-10);
+  border-radius: var(--radius);
+  background: var(--white);
+  font-weight: 500;
+}
+
+.coop__list li::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 20px;
+  width: 12px;
+  height: 7px;
+  border-left: 2px solid var(--navy);
+  border-bottom: 2px solid var(--navy);
+  transform: rotate(-45deg);
 }
