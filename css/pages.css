@@ -1660,3 +1660,7 @@ html:has(.subnav) {
   justify-self: start;
   margin-top: 8px;
 }
+
+.property-title__address {
+  color: var(--text-muted);
+}

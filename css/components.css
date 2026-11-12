@@ -839,12 +839,6 @@ select.form__input {
   .page-head h1 { font-size: 2.25rem; }
 }
 
-.page-head__text {
-  max-width: 640px;
-  color: var(--text-muted);
-  font-size: var(--fs-base);
-}
-
 .breadcrumbs {
   margin-bottom: 12px;
   font-size: var(--fs-xs);
