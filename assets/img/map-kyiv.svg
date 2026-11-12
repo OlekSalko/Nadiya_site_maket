@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 640" font-family="system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif">
+  <!-- Placeholder map: stylised Kyiv and suburbs (not to scale) -->
+  <rect width="1000" height="640" fill="#eef0f3"/>
+
+  <!-- Suburbs -->
+  <path d="M60 110 C110 70 220 80 250 130 C270 175 230 230 170 236 C110 242 50 200 46 160 Z" fill="#e3e7ec" stroke="#ced3d8" stroke-width="2"/>
+  <path d="M790 110 C850 80 950 100 960 150 C968 200 920 240 860 236 C800 232 770 190 772 150 Z" fill="#e3e7ec" stroke="#ced3d8" stroke-width="2"/>
+
+  <!-- City boundary -->
+  <path d="M300 90 C380 50 520 60 610 80 C700 96 760 140 780 210 C800 290 790 380 760 460 C730 540 640 600 540 606 C440 612 350 590 290 530 C230 470 200 380 214 290 C226 200 240 130 300 90 Z" fill="#e6e9ee" stroke="#ced3d8" stroke-width="3"/>
+
+  <!-- Main roads -->
+  <g stroke="#ffffff" stroke-width="9" fill="none" stroke-linecap="round">
+    <path d="M30 170 C150 190 260 250 420 330 C520 380 620 380 980 300"/>
+    <path d="M200 610 C280 520 380 450 470 400 C560 350 620 260 640 30"/>
+    <path d="M520 630 C510 520 500 420 520 330 C540 250 520 150 430 20"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M240 300 C320 320 380 300 450 260"/>
+    <path d="M330 470 C400 440 450 470 520 520"/>
+    <path d="M640 420 C700 400 740 430 790 470"/>
+    <path d="M620 180 C680 200 720 240 760 250"/>
+    <path d="M360 150 C400 200 400 250 380 300"/>
+  </g>
+
+  <!-- Dnipro river -->
+  <path d="M548 0 C540 80 580 140 560 220 C540 300 580 360 590 430 C600 500 570 560 600 640 L668 640 C640 560 668 500 656 430 C644 360 610 300 628 220 C646 140 606 80 614 0 Z" fill="#c9d3de"/>
+  <ellipse cx="600" cy="250" rx="16" ry="58" fill="#e3e7ec"/>
+  <ellipse cx="618" cy="470" rx="12" ry="40" fill="#e3e7ec"/>
+  <text x="628" y="132" font-size="16" fill="#84919f" font-style="italic" transform="rotate(80 628 132)">р. Дніпро</text>
+
+  <!-- District labels -->
+  <g font-size="15" fill="#84919f" font-weight="600" letter-spacing="0.5">
+    <text x="410" y="140">ОБОЛОНСЬКИЙ</text>
+    <text x="236" y="250">СВЯТОШИНСЬКИЙ</text>
+    <text x="280" y="430">СОЛОМ'ЯНСЬКИЙ</text>
+    <text x="380" y="560">ГОЛОСІЇВСЬКИЙ</text>
+    <text x="680" y="250">ДНІПРОВСЬКИЙ</text>
+    <text x="672" y="520">ДАРНИЦЬКИЙ</text>
+    <text x="456" y="370" font-size="13">ЦЕНТР</text>
+  </g>
+  <g font-size="18" fill="#4a5d73" font-weight="700">
+    <text x="104" y="130">Ірпінь</text>
+    <text x="842" y="130">Бровари</text>
+    <text x="236" y="76" font-size="22" fill="#0a223e">Київ</text>
+  </g>
+
+  <!-- Scale bar -->
+  <g transform="translate(40 600)" font-size="12" fill="#84919f">
+    <rect width="80" height="4" fill="#84919f"/>
+    <text x="0" y="-8">5 км</text>
+  </g>
+</svg>
