@@ -28,7 +28,7 @@ python3 -m http.server 8000
 ## Структура
 
 - `css/` — `base.css` (токени, reset, типографіка), `components.css` (шапка, футер, кнопки, картки, модалки, форми), `pages.css`
-- `js/` — `main.js` (меню, модалки, форми), `data.js` (дані ЖК і квартир), `chessboard.js`, `filters.js`, `apartment-modal.js`, `tabs.js`, `gallery.js`, `subnav.js`, `cooperation.js`
+- `js/` — `main.js` (меню, модалки, форми), `data.js` (дані ЖК і квартир), `chessboard.js`, `filters.js`, `apartment-modal.js`, `tabs.js`, `gallery.js`, `subnav.js`, `build-timeline.js`
 - `assets/` — лого, презентаційне відео, кадри з відео, SVG-планування, іконки
 
 Усі дані (ЖК, квартири, ціни, контакти) — вигадані плейсхолдери.

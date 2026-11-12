@@ -16,6 +16,7 @@
   <script src="../js/apartment-modal.js" defer></script>
   <script src="../js/chessboard.js" defer></script>
   <script src="../js/subnav.js" defer></script>
+  <script src="../js/build-timeline.js" defer></script>
 </head>
 <body class="page-property">
   <a class="skip-link" href="#main">Перейти до змісту</a>
@@ -67,7 +68,7 @@
           <div>
             <span class="badge badge--dark">Будується · Готовність 45%</span>
             <h1>ЖК «Надія Парк»</h1>
-            <p class="page-head__text">Київ, Голосіївський р-н, вул. Паркова, 8</p>
+            <p class="property-title__address">Київ, Голосіївський р-н, вул. Паркова, 8</p>
           </div>
           <div class="property-title__price">
             <span class="muted">Ціна від</span>
@@ -105,6 +106,7 @@
           <li><a href="#chess">Вибір квартири</a></li>
           <li><a href="#purchase">Умови оплати</a></li>
           <li><a href="#progress">Хід будівництва</a></li>
+          <li><a href="#chronicle">Фотохроніка</a></li>
           <li><a href="#location">Розташування</a></li>
           <li><a href="#request">Заявка</a></li>
         </ul>
@@ -360,8 +362,114 @@
       </div>
     </section>
 
+    <!-- Construction photo chronicle: animated timeline -->
+    <section class="section section--alt" id="chronicle" aria-labelledby="chronicle-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Фотохроніка</span>
+            <h2 id="chronicle-title">Будівництво крок за кроком</h2>
+          </div>
+          <button class="chrono__toggle" type="button" aria-pressed="false" data-chrono-toggle>
+            <span class="chrono__toggle-icon" aria-hidden="true"></span>
+            <span data-chrono-toggle-label>Пауза</span>
+          </button>
+        </div>
+
+        <div class="chrono" data-chrono data-interval="4000">
+          <div class="chrono__stage" aria-live="polite">
+            <figure class="chrono__slide is-active" data-stage="0" data-date="II кв. 2025" data-title="Дозвіл і котлован" data-photo="1" data-photos="2">
+              <img src="../assets/img/panorama.jpg" alt="Ділянка під забудову перед стартом робіт" width="1280" height="720" loading="lazy">
+              <figcaption>Ділянка під забудову перед стартом робіт</figcaption>
+            </figure>
+            <figure class="chrono__slide" data-stage="0" data-date="II кв. 2025" data-title="Дозвіл і котлован" data-photo="2" data-photos="2">
+              <img src="../assets/img/aerial-site.jpg" alt="Розробка котловану та огородження майданчика" width="1280" height="720" loading="lazy">
+              <figcaption>Розробка котловану та огородження майданчика</figcaption>
+            </figure>
+            <figure class="chrono__slide" data-stage="1" data-date="IV кв. 2025" data-title="Фундамент і паркінг" data-photo="1" data-photos="2">
+              <img src="../assets/img/site-top.jpg" alt="Армування та заливка фундаментної плити" width="1280" height="720" loading="lazy">
+              <figcaption>Армування та заливка фундаментної плити</figcaption>
+            </figure>
+            <figure class="chrono__slide" data-stage="1" data-date="IV кв. 2025" data-title="Фундамент і паркінг" data-photo="2" data-photos="2">
+              <img src="../assets/img/formwork.jpg" alt="Монолітні стіни підземного паркінгу" width="1280" height="720" loading="lazy">
+              <figcaption>Монолітні стіни підземного паркінгу</figcaption>
+            </figure>
+            <figure class="chrono__slide" data-stage="2" data-date="IV кв. 2026" data-title="Монолітний каркас: 9 з 16 поверхів" data-photo="1" data-photos="3">
+              <img src="../assets/img/crane.jpg" alt="Монтаж щитової опалубки баштовим краном" width="1280" height="720" loading="lazy">
+              <figcaption>Монтаж щитової опалубки баштовим краном</figcaption>
+            </figure>
+            <figure class="chrono__slide" data-stage="2" data-date="IV кв. 2026" data-title="Монолітний каркас: 9 з 16 поверхів" data-photo="2" data-photos="3">
+              <img src="../assets/img/formwork.jpg" alt="Армування колон 9-го поверху" width="1280" height="720" loading="lazy">
+              <figcaption>Армування колон 9-го поверху</figcaption>
+            </figure>
+            <figure class="chrono__slide" data-stage="2" data-date="IV кв. 2026" data-title="Монолітний каркас: 9 з 16 поверхів" data-photo="3" data-photos="3">
+              <img src="../assets/img/site-top.jpg" alt="Бетонування перекриття 9-го поверху" width="1280" height="720" loading="lazy">
+              <figcaption>Бетонування перекриття 9-го поверху</figcaption>
+            </figure>
+            <figure class="chrono__slide" data-stage="3" data-date="II кв. 2027" data-title="Фасад та інженерні мережі" data-photo="1" data-photos="2">
+              <img src="../assets/img/facade.jpg" alt="Візуалізація: утеплення та оздоблення фасаду" width="1280" height="720" loading="lazy">
+              <figcaption>Візуалізація: утеплення та оздоблення фасаду</figcaption>
+            </figure>
+            <figure class="chrono__slide" data-stage="3" data-date="II кв. 2027" data-title="Фасад та інженерні мережі" data-photo="2" data-photos="2">
+              <img src="../assets/img/aerial-tower.jpg" alt="Візуалізація: прокладання зовнішніх мереж" width="1280" height="720" loading="lazy">
+              <figcaption>Візуалізація: прокладання зовнішніх мереж</figcaption>
+            </figure>
+            <figure class="chrono__slide" data-stage="4" data-date="IV кв. 2027" data-title="Введення в експлуатацію" data-photo="1" data-photos="2">
+              <img src="../assets/img/aerial-tower.jpg" alt="Візуалізація: готовий комплекс з висоти" width="1280" height="720" loading="lazy">
+              <figcaption>Візуалізація: готовий комплекс з висоти</figcaption>
+            </figure>
+            <figure class="chrono__slide" data-stage="4" data-date="IV кв. 2027" data-title="Введення в експлуатацію" data-photo="2" data-photos="2">
+              <img src="../assets/img/panorama.jpg" alt="Візуалізація: благоустрій прибудинкової території" width="1280" height="720" loading="lazy">
+              <figcaption>Візуалізація: благоустрій прибудинкової території</figcaption>
+            </figure>
+            <div class="chrono__info">
+              <span class="chrono__date" data-chrono-date></span>
+              <span class="chrono__title" data-chrono-title></span>
+              <span class="chrono__count" data-chrono-count></span>
+            </div>
+          </div>
+
+          <div class="chrono__scale">
+            <div class="chrono__track" data-chrono-track>
+              <div class="chrono__fill" data-chrono-fill></div>
+              <div class="chrono__thumb" data-chrono-thumb role="slider" tabindex="0"
+                   aria-label="Етап будівництва" aria-valuemin="1" aria-valuemax="11" aria-valuenow="1"></div>
+            </div>
+            <ol class="chrono__markers">
+            <li class="chrono__marker chrono__marker--done" data-stage="0">
+              <button class="chrono__marker-btn" type="button" data-goto="0" tabindex="-1">
+                <span class="chrono__q">II кв.</span><span class="chrono__y">2025</span>
+              </button>
+            </li>
+            <li class="chrono__marker chrono__marker--done" data-stage="1">
+              <button class="chrono__marker-btn" type="button" data-goto="2" tabindex="-1">
+                <span class="chrono__q">IV кв.</span><span class="chrono__y">2025</span>
+              </button>
+            </li>
+            <li class="chrono__marker chrono__marker--current" data-stage="2">
+              <button class="chrono__marker-btn" type="button" data-goto="4" tabindex="-1">
+                <span class="chrono__q">IV кв.</span><span class="chrono__y">2026</span>
+              </button>
+            </li>
+            <li class="chrono__marker chrono__marker--plan" data-stage="3">
+              <button class="chrono__marker-btn" type="button" data-goto="7" tabindex="-1">
+                <span class="chrono__q">II кв.</span><span class="chrono__y">2027</span>
+              </button>
+            </li>
+            <li class="chrono__marker chrono__marker--plan" data-stage="4">
+              <button class="chrono__marker-btn" type="button" data-goto="9" tabindex="-1">
+                <span class="chrono__q">IV кв.</span><span class="chrono__y">2027</span>
+              </button>
+            </li>
+            </ol>
+          </div>
+          <p class="chrono__hint muted">Перетягніть повзунок по шкалі або натисніть на дату, щоб переглянути етап.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Location -->
-    <section class="section section--alt" id="location" aria-labelledby="location-title">
+    <section class="section" id="location" aria-labelledby="location-title">
       <div class="container location">
         <div class="location__text">
           <span class="eyebrow">Розташування</span>
@@ -407,7 +515,7 @@
     </section>
 
     <!-- Request form -->
-    <section class="section cta" id="request" aria-labelledby="request-title">
+    <section class="section section--alt cta" id="request" aria-labelledby="request-title">
       <div class="container cta__inner">
         <div class="cta__text">
           <span class="eyebrow">ЖК «Надія Парк»</span>

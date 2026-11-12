@@ -11,8 +11,6 @@
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/pages.css">
   <script src="../js/main.js" defer></script>
-  <script src="../js/tabs.js" defer></script>
-  <script src="../js/cooperation.js" defer></script>
 </head>
 <body class="page-cooperation">
   <a class="skip-link" href="#main">Перейти до змісту</a>
@@ -60,265 +58,63 @@
           </ol>
         </nav>
         <h1>Співпраця</h1>
-        <p class="page-head__text">Шукаємо фахівців у команду, підрядників і постачальників для довгострокової співпраці.</p>
       </div>
     </section>
 
-    <section class="section">
-      <div class="container">
-        <div class="tabs" data-tabs>
-          <div class="tabs__list" role="tablist" aria-label="Напрями співпраці">
-            <button class="tabs__tab" type="button" role="tab" id="tab-vacancies" aria-controls="panel-vacancies" aria-selected="true" data-request-type="employment">Вакансії <span class="tabs__count">7</span></button>
-            <button class="tabs__tab" type="button" role="tab" id="tab-contracting" aria-controls="panel-contracting" aria-selected="false" tabindex="-1" data-request-type="contracting">Генпідряд</button>
-            <button class="tabs__tab" type="button" role="tab" id="tab-supply" aria-controls="panel-supply" aria-selected="false" tabindex="-1" data-request-type="supply">Постачальникам</button>
-          </div>
-
-          <!-- Vacancies -->
-          <div class="tabs__panel" role="tabpanel" id="panel-vacancies" aria-labelledby="tab-vacancies" tabindex="0">
-            <div class="coop-intro">
-              <h2>Приєднуйтесь до команди «Надії»</h2>
-              <p class="muted">Офіційне працевлаштування з першого дня, стабільна зарплата без затримок, спецодяг і навчання. Понад 420 людей уже будують з нами.</p>
-            </div>
-            <ul class="vacancies">
-            <li class="vacancy">
-              <div class="vacancy__head">
-                <h3 class="vacancy__title">Інженер ПТО</h3>
-                <span class="vacancy__salary">від 40 000 ₴</span>
-              </div>
-              <p class="vacancy__meta">Київ, офіс + об'єкти · повна зайнятість</p>
-              <ul class="vacancy__list">
-                <li>Вища технічна освіта (ПЦБ)</li>
-                <li>Досвід у ПТО від 2 років</li>
-                <li>Знання ДБН, AutoCAD, кошторисних програм</li>
-              </ul>
-              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Інженер ПТО">Відгукнутися</button>
-            </li>
-            <li class="vacancy">
-              <div class="vacancy__head">
-                <h3 class="vacancy__title">Виконроб</h3>
-                <span class="vacancy__salary">від 50 000 ₴</span>
-              </div>
-              <p class="vacancy__meta">Київ, ЖК «Надія Парк» · повна зайнятість</p>
-              <ul class="vacancy__list">
-                <li>Досвід керування монолітними роботами від 3 років</li>
-                <li>Вміння читати проєктну документацію</li>
-                <li>Організація роботи бригад і субпідрядників</li>
-              </ul>
-              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Виконроб">Відгукнутися</button>
-            </li>
-            <li class="vacancy">
-              <div class="vacancy__head">
-                <h3 class="vacancy__title">Монолітник</h3>
-                <span class="vacancy__salary">від 35 000 ₴</span>
-              </div>
-              <p class="vacancy__meta">Київ та область · повна зайнятість</p>
-              <ul class="vacancy__list">
-                <li>Досвід монолітних робіт від 1 року</li>
-                <li>Робота з опалубкою, бетонування</li>
-                <li>Офіційне працевлаштування, спецодяг</li>
-              </ul>
-              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Монолітник">Відгукнутися</button>
-            </li>
-            <li class="vacancy">
-              <div class="vacancy__head">
-                <h3 class="vacancy__title">Арматурник</h3>
-                <span class="vacancy__salary">від 33 000 ₴</span>
-              </div>
-              <p class="vacancy__meta">Київ та область · повна зайнятість</p>
-              <ul class="vacancy__list">
-                <li>Досвід в'язання арматурних каркасів</li>
-                <li>Читання арматурних креслень</li>
-                <li>Можливе навчання на об'єкті</li>
-              </ul>
-              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Арматурник">Відгукнутися</button>
-            </li>
-            <li class="vacancy">
-              <div class="vacancy__head">
-                <h3 class="vacancy__title">Машиніст баштового крана</h3>
-                <span class="vacancy__salary">від 45 000 ₴</span>
-              </div>
-              <p class="vacancy__meta">Київ, Бровари · повна зайнятість</p>
-              <ul class="vacancy__list">
-                <li>Посвідчення машиніста крана</li>
-                <li>Досвід роботи від 2 років</li>
-                <li>Графік 5/2, оплата понаднормових</li>
-              </ul>
-              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Машиніст баштового крана">Відгукнутися</button>
-            </li>
-            <li class="vacancy">
-              <div class="vacancy__head">
-                <h3 class="vacancy__title">Електромонтажник</h3>
-                <span class="vacancy__salary">від 36 000 ₴</span>
-              </div>
-              <p class="vacancy__meta">Київ та область · повна зайнятість</p>
-              <ul class="vacancy__list">
-                <li>Група з електробезпеки не нижче III</li>
-                <li>Монтаж внутрішніх мереж житлових будинків</li>
-                <li>Власний інструмент — перевага</li>
-              </ul>
-              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Електромонтажник">Відгукнутися</button>
-            </li>
-            <li class="vacancy">
-              <div class="vacancy__head">
-                <h3 class="vacancy__title">Менеджер з продажу нерухомості</h3>
-                <span class="vacancy__salary">ставка + %</span>
-              </div>
-              <p class="vacancy__meta">Київ, офіс продажу · повна зайнятість</p>
-              <ul class="vacancy__list">
-                <li>Досвід продажів від 1 року</li>
-                <li>Грамотне усне й письмове мовлення</li>
-                <li>Робота з CRM, ведення клієнта до угоди</li>
-              </ul>
-              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Менеджер з продажу нерухомості">Відгукнутися</button>
-            </li>
-            </ul>
-            <p class="coop-note">Не знайшли свою вакансію? Надішліть резюме на <a href="mailto:hr@nadiya.example">hr@nadiya.example</a> або залиште заявку нижче — ми зв'яжемося, щойно з'явиться відповідна позиція.</p>
-          </div>
-
-          <!-- General contracting -->
-          <div class="tabs__panel" role="tabpanel" id="panel-contracting" aria-labelledby="tab-contracting" tabindex="0" hidden>
-            <div class="coop-intro">
-              <h2>Генпідрядні роботи</h2>
-              <p class="muted">Виконуємо будівництво «під ключ» для приватних і комерційних замовників — з власною технікою, бетоном і бригадами.</p>
-            </div>
-            <ul class="coop-grid">
-            <li class="coop-card">
-              <h3 class="coop-card__title">Монолітні та каркасні роботи</h3>
-              <p class="coop-card__text">Фундаменти, каркаси, перекриття житлових і комерційних будівель.</p>
-            </li>
-            <li class="coop-card">
-              <h3 class="coop-card__title">Загальнобудівельні роботи</h3>
-              <p class="coop-card__text">Кладка, покрівля, фасади, оздоблення місць загального користування.</p>
-            </li>
-            <li class="coop-card">
-              <h3 class="coop-card__title">Інженерні мережі</h3>
-              <p class="coop-card__text">Електропостачання, опалення, водопостачання та каналізація.</p>
-            </li>
-            <li class="coop-card">
-              <h3 class="coop-card__title">Благоустрій</h3>
-              <p class="coop-card__text">Дороги, тротуари, дитячі майданчики, озеленення території.</p>
-            </li>
-            </ul>
-            <div class="coop-terms">
-              <h3>Умови співпраці</h3>
-              <ul class="pay-card__list">
-                <li>Договір генпідряду з фіксованим кошторисом та графіком робіт</li>
-                <li>Гарантія на виконані роботи — 10 років на конструктив</li>
-                <li>Щотижневі фото- та відеозвіти, доступ для технагляду замовника</li>
-                <li>Поетапна оплата за актами виконаних робіт</li>
-              </ul>
-              <button class="btn btn--primary" type="button" data-open-contact data-request-type="contracting" data-message="Цікавить генпідряд">Обговорити проєкт</button>
-            </div>
-          </div>
-
-          <!-- Suppliers -->
-          <div class="tabs__panel" role="tabpanel" id="panel-supply" aria-labelledby="tab-supply" tabindex="0" hidden>
-            <div class="coop-intro">
-              <h2>Постачальникам</h2>
-              <p class="muted">Відділ постачання розглядає комерційні пропозиції від виробників і дистриб'юторів будівельних матеріалів.</p>
-            </div>
-            <ul class="coop-grid coop-grid--3">
-            <li class="coop-card">
-              <h3 class="coop-card__title">Бетонні суміші та інертні матеріали</h3>
-              <p class="coop-card__text">Цемент, пісок, щебінь, хімічні добавки</p>
-            </li>
-            <li class="coop-card">
-              <h3 class="coop-card__title">Металопрокат</h3>
-              <p class="coop-card__text">Арматура, сітка, закладні деталі</p>
-            </li>
-            <li class="coop-card">
-              <h3 class="coop-card__title">Стінові матеріали</h3>
-              <p class="coop-card__text">Газоблок, цегла, кладкові суміші</p>
-            </li>
-            <li class="coop-card">
-              <h3 class="coop-card__title">Утеплення та фасад</h3>
-              <p class="coop-card__text">Мінеральна вата, штукатурні системи</p>
-            </li>
-            <li class="coop-card">
-              <h3 class="coop-card__title">Вікна та двері</h3>
-              <p class="coop-card__text">Металопластикові вікна, вхідні та протипожежні двері</p>
-            </li>
-            <li class="coop-card">
-              <h3 class="coop-card__title">Інженерне обладнання</h3>
-              <p class="coop-card__text">Котли, ліфти, кабельна продукція, сантехніка</p>
-            </li>
-            </ul>
-            <div class="coop-terms">
-              <h3>Вимоги до постачальників</h3>
-              <ul class="pay-card__list">
-                <li>Сертифікати відповідності та паспорти якості на продукцію</li>
-                <li>Стабільні обсяги та доставка на об'єкти Києва й області</li>
-                <li>Робота з ПДВ, відстрочка платежу — перевага</li>
-                <li>Комерційну пропозицію надсилайте на <a href="mailto:supply@nadiya.example">supply@nadiya.example</a></li>
-              </ul>
-              <button class="btn btn--primary" type="button" data-open-contact data-request-type="supply" data-message="Комерційна пропозиція: ">Надіслати пропозицію</button>
-            </div>
-          </div>
+    <section class="section coop" id="vacancies" aria-labelledby="vacancies-title">
+      <div class="container coop__inner">
+        <div class="coop__text">
+          <span class="eyebrow">Вакансії</span>
+          <h2 id="vacancies-title">Приєднуйтесь до команди «Надії»</h2>
+          <p class="lead">Офіційне працевлаштування з першого дня, стабільна зарплата без затримок, спецодяг і навчання. Понад 420 людей уже будують з нами — шукаємо фахівців на об'єкти та в офіс.</p>
+          <button class="btn btn--primary" type="button" data-open-contact data-request-type="employment" data-message="Цікавить вакансія: ">Зв'язатися з відділом кадрів</button>
         </div>
+        <ul class="coop__list">
+            <li>Інженер ПТО</li>
+            <li>Виконроб</li>
+            <li>Монолітник</li>
+            <li>Арматурник</li>
+            <li>Машиніст баштового крана</li>
+            <li>Електромонтажник</li>
+            <li>Менеджер з продажу нерухомості</li>
+        </ul>
       </div>
     </section>
 
-    <!-- Form -->
-    <section class="section section--alt cta" aria-labelledby="coop-form-title">
-      <div class="container cta__inner">
-        <div class="cta__text">
-          <span class="eyebrow">Зв'язок</span>
-          <h2 id="coop-form-title">Залиште заявку</h2>
-          <p class="lead">Оберіть тип звернення — заявку отримає відповідний відділ: кадрів, генпідряду чи постачання.</p>
-          <ul class="cta__points">
-            <li>Відділ кадрів: +38 (044) 123-45-70</li>
-            <li>Відділ постачання: +38 (044) 123-45-71</li>
-            <li>Пн–Пт, 9:00–18:00</li>
-          </ul>
+    <section class="section section--alt coop" id="contracting" aria-labelledby="contracting-title">
+      <div class="container coop__inner">
+        <div class="coop__text">
+          <span class="eyebrow">Генпідряд</span>
+          <h2 id="contracting-title">Будуємо під ключ для замовників</h2>
+          <p class="lead">Виконуємо генпідрядні роботи для приватних і комерційних замовників з власною технікою, бетоном і бригадами. Фіксований кошторис, графік робіт і поетапна оплата за актами.</p>
+          <button class="btn btn--primary" type="button" data-open-contact data-request-type="contracting" data-message="Цікавить генпідряд">Зв'язатися з відділом генпідряду</button>
         </div>
-        <div class="cta__form on-dark">
-          <form class="form js-contact-form" novalidate>
-            <div class="form__field">
-              <label class="form__label" for="co-type">Тип звернення</label>
-              <select class="form__input" id="co-type" name="type">
-                <option value="consultation">Консультація в офісі продажу</option>
-                <option value="callback">Зворотний дзвінок</option>
-                <option value="booking">Бронювання квартири</option>
-                <option value="viewing">Перегляд об'єкта</option>
-                <option value="online">Онлайн-консультація</option>
-                <option value="availability">Уточнити наявність квартир</option>
-                <option value="employment" selected>Працевлаштування</option>
-                <option value="contracting">Генпідряд</option>
-                <option value="supply">Постачання матеріалів</option>
-              </select>
-            </div>
-            <div class="form__field">
-              <label class="form__label" for="co-name">Ваше ім'я</label>
-              <input class="form__input" id="co-name" name="name" type="text" autocomplete="name" required placeholder="Олена">
-            </div>
-            <div class="form__field">
-              <label class="form__label" for="co-phone">Телефон</label>
-              <input class="form__input" id="co-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__">
-            </div>
-            <div class="form__field">
-              <label class="form__label" for="co-project">Житловий комплекс</label>
-              <select class="form__input" id="co-project" name="project">
-                <option value="">Ще не визначився</option>
-                <option>ЖК «Надія Парк»</option>
-                <option>ЖК «Набережний»</option>
-                <option>ЖК «Сонячна Гавань»</option>
-              </select>
-            </div>
-            <div class="form__field">
-              <label class="form__label" for="co-message">Коментар</label>
-              <textarea class="form__input" id="co-message" name="message" rows="3" placeholder="Ваше запитання або побажання"></textarea>
-            </div>
-            <label class="form__check">
-              <input type="checkbox" name="agree" required checked>
-              <span>Погоджуюсь на обробку персональних даних</span>
-            </label>
-            <button class="btn btn--light btn--block" type="submit">Надіслати заявку</button>
-          </form>
-          <div class="form-success" hidden>
-            <p class="form-success__title">Дякуємо!</p>
-            <p class="muted">Заявку отримано. Ми зв'яжемося з вами найближчим часом.</p>
-          </div>
+        <ul class="coop__list">
+            <li>Монолітні та каркасні роботи</li>
+            <li>Загальнобудівельні роботи: кладка, покрівля, фасади</li>
+            <li>Інженерні мережі: електрика, опалення, водопостачання</li>
+            <li>Благоустрій: дороги, майданчики, озеленення</li>
+            <li>Гарантія 10 років на конструктив</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section coop" id="supply" aria-labelledby="supply-title">
+      <div class="container coop__inner">
+        <div class="coop__text">
+          <span class="eyebrow">Постачальникам</span>
+          <h2 id="supply-title">Відкриті до нових постачальників</h2>
+          <p class="lead">Відділ постачання розглядає комерційні пропозиції від виробників і дистриб'юторів будівельних матеріалів. Потрібні сертифікати якості, стабільні обсяги та доставка на об'єкти Києва й області.</p>
+          <button class="btn btn--primary" type="button" data-open-contact data-request-type="supply" data-message="Комерційна пропозиція: ">Зв'язатися з відділом постачання</button>
         </div>
+        <ul class="coop__list">
+            <li>Бетонні суміші та інертні матеріали</li>
+            <li>Металопрокат і арматура</li>
+            <li>Стінові матеріали: газоблок, цегла</li>
+            <li>Утеплення та фасадні системи</li>
+            <li>Вікна та двері</li>
+            <li>Інженерне обладнання: котли, ліфти, кабель</li>
+        </ul>
       </div>
     </section>
   </main>
