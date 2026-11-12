@@ -28,7 +28,11 @@ python3 -m http.server 8000
 ## Структура
 
 - `css/` — `base.css` (токени, reset, типографіка), `components.css` (шапка, футер, кнопки, картки, модалки, форми), `pages.css`
-- `js/` — `main.js` (меню, модалки, форми), `data.js` (дані ЖК і квартир), `chessboard.js`, `filters.js`, `apartment-modal.js`, `tabs.js`, `gallery.js`, `subnav.js`, `build-timeline.js`
+- `js/` — `main.js` (меню, модалки, форми), `data.js` (дані ЖК і квартир), `chessboard.js`, `filters.js`, `apartment-modal.js`, `tabs.js`, `gallery.js`, `subnav.js`, `build-timeline.js`, `monthly-gallery.js`
 - `assets/` — лого, презентаційне відео, кадри з відео, SVG-планування, іконки
 
 Усі дані (ЖК, квартири, ціни, контакти) — вигадані плейсхолдери.
+
+## Ресурси
+
+Іконки соцмереж (`assets/icons/social/`) — [Simple Icons](https://simpleicons.org) v13.21.0, ліцензія CC0-1.0.
