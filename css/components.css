@@ -1071,3 +1071,16 @@ select.form__input {
   font-size: var(--fs-xs);
   text-align: center;
 }
+
+/* Header contact button: same blue accent as the floating button */
+.btn.header-cta {
+  border-color: var(--accent);
+  background: var(--accent);
+  color: var(--white);
+}
+
+.btn.header-cta:hover {
+  border-color: var(--accent-dark);
+  background: var(--accent-dark);
+  color: var(--white);
+}
