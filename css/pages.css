@@ -2087,3 +2087,309 @@ html:has(.subnav) {
   .photo-viewer__nav--prev { left: -60px; }
   .photo-viewer__nav--next { right: -60px; }
 }
+
+/* --------------------------------------------------------------------------
+   Objects map (home + property page)
+   -------------------------------------------------------------------------- */
+.objects-map {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background: #eef0f3;
+}
+
+.objects-map__img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.objects-map__layer {
+  position: absolute;
+  inset: 0;
+}
+
+/* Markers ---------------------------------------------------------------- */
+.map-marker {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border-radius: 50%;
+  transition: transform 0.25s ease, opacity 0.25s ease, visibility 0.25s;
+}
+
+@media (min-width: 768px) {
+  .map-marker { width: 34px; height: 34px; margin: -17px 0 0 -17px; }
+}
+
+.map-marker__dot {
+  width: 16px;
+  height: 16px;
+  border: 3px solid var(--white);
+  border-radius: 50%;
+  box-shadow: 0 2px 6px rgba(10, 34, 62, 0.35);
+  transition: transform 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .map-marker__dot { width: 20px; height: 20px; }
+}
+
+.map-marker--sale .map-marker__dot { background: var(--navy); }
+.map-marker--done .map-marker__dot { background: var(--navy-50); }
+
+/* Commercial: square marker, white with navy outline (differs not only by colour) */
+.map-marker--commercial .map-marker__dot {
+  border: 3px solid var(--navy);
+  border-radius: 3px;
+  background: var(--white);
+  transform: rotate(45deg);
+}
+
+.map-marker:hover .map-marker__dot,
+.map-marker.is-open .map-marker__dot {
+  transform: scale(1.3);
+}
+
+.map-marker--commercial:hover .map-marker__dot,
+.map-marker--commercial.is-open .map-marker__dot {
+  transform: rotate(45deg) scale(1.3);
+}
+
+.map-marker.is-open {
+  z-index: 3;
+}
+
+.map-marker:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 0;
+}
+
+.map-marker.is-hidden {
+  opacity: 0;
+  transform: scale(0.4);
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* Property page: muted dots + one active pin */
+.map-marker--muted {
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+  background: var(--navy-20);
+  border: 2px solid var(--white);
+}
+
+.map-marker--active {
+  z-index: 2;
+  width: auto;
+  height: auto;
+  margin: 0;
+  border-radius: 0;
+  transform: translate(-50%, -100%);
+  flex-direction: column;
+}
+
+.map-marker__label {
+  order: -1;
+  margin-bottom: 6px;
+  padding: 6px 10px;
+  border-radius: var(--radius);
+  background: var(--navy);
+  color: var(--white);
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: var(--shadow);
+}
+
+.map-marker__pin {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50% 50% 50% 0;
+  background: var(--navy);
+  transform: rotate(-45deg);
+  box-shadow: 0 4px 10px rgba(10, 34, 62, 0.4);
+}
+
+.map-marker__pin::after {
+  content: "";
+  position: absolute;
+  inset: 9px;
+  border-radius: 50%;
+  background: var(--white);
+}
+
+/* Pulse ring under the active pin */
+.map-marker--active::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -10px;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  border-radius: 50%;
+  background: rgba(10, 34, 62, 0.35);
+  animation: map-pulse 2s ease-out infinite;
+  z-index: -1;
+}
+
+@keyframes map-pulse {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(2.6); opacity: 0; }
+}
+
+/* Popup ------------------------------------------------------------------ */
+.map-popup {
+  position: absolute;
+  z-index: 4;
+  display: grid;
+  gap: 4px;
+  width: 260px;
+  padding: 16px 16px 14px;
+  border-radius: var(--radius-lg);
+  background: var(--white);
+  box-shadow: 0 12px 32px rgba(10, 34, 62, 0.28);
+  transform: translate(-50%, calc(-100% - 22px));
+  animation: fade-in 0.2s ease;
+}
+
+.map-popup.is-below { transform: translate(-50%, 22px); }
+.map-popup.is-left { transform: translate(-24px, calc(-100% - 22px)); }
+.map-popup.is-right { transform: translate(calc(-100% + 24px), calc(-100% - 22px)); }
+.map-popup.is-below.is-left { transform: translate(-24px, 22px); }
+.map-popup.is-below.is-right { transform: translate(calc(-100% + 24px), 22px); }
+
+/* Phones: pin the popup to the bottom of the map so it never overflows */
+@media (max-width: 599px) {
+  .map-popup,
+  .map-popup.is-below,
+  .map-popup.is-left,
+  .map-popup.is-right,
+  .map-popup.is-below.is-left,
+  .map-popup.is-below.is-right {
+    left: 8px !important;
+    right: 8px;
+    top: auto !important;
+    bottom: 8px;
+    width: auto;
+    transform: none;
+  }
+}
+
+.map-popup__close {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 36px;
+  height: 36px;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--navy-70);
+}
+
+.map-popup__type {
+  justify-self: start;
+  padding: 3px 8px;
+  border-radius: var(--radius);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.map-popup__type--sale { background: var(--navy); color: var(--white); }
+.map-popup__type--done { background: var(--navy-50); color: var(--white); }
+.map-popup__type--commercial { border: 1px solid var(--navy); color: var(--navy); }
+
+.map-popup__name {
+  margin-top: 4px;
+  padding-right: 24px;
+  font-size: var(--fs-lg);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.map-popup__address,
+.map-popup__fact {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.map-popup__fact {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.map-popup__link {
+  justify-self: start;
+  margin-top: 8px;
+}
+
+/* Filters (home page) ----------------------------------------------------- */
+.map-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.map-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.map-filter__mark {
+  width: 12px;
+  height: 12px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px var(--navy-20);
+}
+
+.map-filter__mark--sale { background: var(--navy); }
+.map-filter__mark--done { background: var(--navy-50); }
+.map-filter__mark--commercial {
+  border: 2px solid var(--navy);
+  border-radius: 2px;
+  background: var(--white);
+  box-shadow: none;
+  transform: rotate(45deg);
+}
+
+.map-filter[aria-pressed="false"] {
+  opacity: 0.55;
+  text-decoration: line-through;
+}
+
+/* The chip's "pressed" style is dark; keep filters light so the marks stay visible */
+.map-filter[aria-pressed="true"] {
+  background: var(--white);
+  border-color: var(--navy);
+  color: var(--navy);
+}
+
+.map-filter__count {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 11px;
+  background: var(--navy-10);
+  font-size: var(--fs-xs);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .map-marker--active::after { animation: none; }
+}
