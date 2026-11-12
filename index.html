@@ -25,6 +25,7 @@
       <nav class="main-nav" id="main-nav" aria-label="Головне меню">
         <ul class="main-nav__list">
           <li><a class="main-nav__link" href="index.html" aria-current="page">Головна</a></li>
+          <li><a class="main-nav__link" href="html/about.html">Про компанію</a></li>
           <li><a class="main-nav__link" href="html/properties.html">Об'єкти</a></li>
           <li><a class="main-nav__link" href="html/apartments.html">Вибір квартири</a></li>
           <li><a class="main-nav__link" href="html/contacts.html">Контакти</a></li>
@@ -48,7 +49,7 @@
 
   <main id="main">
     <!-- Hero with presentation video -->
-    <section class="hero on-dark" aria-label="Про компанію">
+    <section class="hero on-dark" aria-label="Головний банер">
       <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="assets/img/aerial-tower.jpg" aria-hidden="true">
         <source src="assets/video/presentation.mp4" type="video/mp4">
       </video>
@@ -56,10 +57,10 @@
       <div class="container hero__content">
         <span class="eyebrow">Забудовник з 2010 року</span>
         <h1 class="hero__title">Будуємо надію<br> на ваш новий дім</h1>
-        <p class="hero__text">Квартири від забудовника в житлових комплексах Києва та області. Фіксована ціна на етапі будівництва, розтермінування до 36 місяців.</p>
+        <p class="hero__text">Квартири від забудовника в житлових комплексах Києва та області. Фіксована ціна на етапі будівництва, розстрочка від забудовника з першим внеском від 30%.</p>
         <div class="hero__actions">
           <a class="btn btn--light" href="html/apartments.html">Обрати квартиру</a>
-          <button class="btn btn--outline-light" type="button" data-open-contact>Консультація</button>
+          <button class="btn btn--outline-light" type="button" data-open-contact data-request-type="consultation">Консультація</button>
         </div>
       </div>
       <button class="hero__toggle" type="button" aria-pressed="false" aria-label="Пауза відео">
@@ -141,6 +142,45 @@
       </div>
     </section>
 
+    <!-- Promo: installment plan -->
+    <section class="promo on-dark" aria-labelledby="promo-title">
+      <div class="container promo__inner">
+        <div class="promo__figure" aria-hidden="true">
+          <span class="promo__value">30%</span>
+          <span class="promo__caption">перший внесок</span>
+        </div>
+        <div class="promo__text">
+          <span class="eyebrow">Розстрочка від забудовника</span>
+          <h2 id="promo-title">Розстрочка без банку та переплат</h2>
+          <p>Ціна за м² фіксується на оплачену частину, решта — рівними щомісячними платежами до здачі будинку. Розрахунок — за 5 хвилин у відділі продажу.</p>
+        </div>
+        <div class="promo__actions">
+          <a class="btn btn--light" href="html/property.html#purchase">Умови оплати</a>
+          <button class="btn btn--outline-light" type="button" data-open-contact data-request-type="consultation" data-message="Прошу розрахувати розстрочку">Розрахувати платіж</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- About teaser -->
+    <section class="section" aria-labelledby="about-teaser-title">
+      <div class="container about-intro">
+        <figure class="about-intro__media">
+          <img src="assets/img/panorama.jpg" alt="Житлові квартали, збудовані компанією" width="1280" height="720" loading="lazy">
+        </figure>
+        <div class="about-intro__text">
+          <span class="eyebrow">Про компанію</span>
+          <h2 id="about-teaser-title">Забудовник повного циклу з 2010 року</h2>
+          <p class="lead">Власний бетонний вузол, парк техніки та бригади — ми самі відповідаємо за кожен етап і жодного разу не зірвали строки здачі.</p>
+          <ul class="cta__points">
+            <li>24 здані будинки, понад 5 200 родин</li>
+            <li>420 фахівців у штаті</li>
+            <li>Обслуговуємо будинки після здачі</li>
+          </ul>
+          <p><a class="link-arrow" href="html/about.html">Детальніше про компанію</a></p>
+        </div>
+      </div>
+    </section>
+
     <!-- Advantages -->
     <section class="section" aria-labelledby="why-title">
       <div class="container">
@@ -164,7 +204,7 @@
           <li class="feature">
             <svg class="feature__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M3 7l12-4v4"/><circle cx="16.5" cy="13.5" r="1.2"/></svg>
             <h3 class="feature__title">Гнучка оплата</h3>
-            <p class="feature__text">Розтермінування до 36 місяців без переплат, іпотека від банків-партнерів, єОселя.</p>
+            <p class="feature__text">Розстрочка від забудовника з першим внеском від 30% без переплат, іпотека від банків-партнерів, єОселя.</p>
           </li>
           <li class="feature">
             <svg class="feature__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" aria-hidden="true"><path d="M12 21v-6"/><path d="M12 3l6 8h-3l4 5H5l4-5H6z"/></svg>
@@ -247,12 +287,13 @@
           <a class="logo logo--footer" href="index.html">
             <img src="assets/img/logo.svg" alt="Надія" width="301" height="122" loading="lazy">
           </a>
-          <p>Будуємо житло, в якому хочеться жити. Понад 15 років на ринку, 24 зданих будинки.</p>
+          <p>Будуємо житло, в якому хочеться жити. З 2010 року на ринку, 24 здані будинки. <a class="site-footer__more" href="html/about.html">Більше про нас</a></p>
         </div>
         <div>
           <h2 class="site-footer__title">Навігація</h2>
           <ul class="site-footer__list">
             <li><a href="index.html">Головна</a></li>
+            <li><a href="html/about.html">Про компанію</a></li>
             <li><a href="html/properties.html">Об'єкти</a></li>
             <li><a href="html/apartments.html">Вибір квартири</a></li>
             <li><a href="html/contacts.html">Контакти</a></li>
@@ -299,6 +340,17 @@
       <h2 class="modal__title" id="contact-modal-title">Залиште заявку</h2>
       <p class="muted modal__text">Менеджер зателефонує протягом 15 хвилин у робочий час і відповість на всі запитання.</p>
       <form class="form js-contact-form" novalidate>
+        <fieldset class="filters__group request-types">
+          <legend class="form__label">Тип звернення</legend>
+          <div class="chips">
+            <label class="chip-check"><input type="radio" name="type" value="consultation" checked><span>Консультація в офісі</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="callback"><span>Зворотний дзвінок</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="booking"><span>Бронювання</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="viewing"><span>Перегляд об'єкта</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="online"><span>Онлайн-консультація</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="availability"><span>Уточнити наявність</span></label>
+          </div>
+        </fieldset>
         <div class="form__field">
           <label class="form__label" for="cm-name">Ваше ім'я</label>
           <input class="form__input" id="cm-name" name="name" type="text" autocomplete="name" required placeholder="Олена">

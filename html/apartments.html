@@ -27,6 +27,7 @@
       <nav class="main-nav" id="main-nav" aria-label="Головне меню">
         <ul class="main-nav__list">
           <li><a class="main-nav__link" href="../index.html">Головна</a></li>
+          <li><a class="main-nav__link" href="about.html">Про компанію</a></li>
           <li><a class="main-nav__link" href="properties.html">Об'єкти</a></li>
           <li><a class="main-nav__link" href="apartments.html" aria-current="page">Вибір квартири</a></li>
           <li><a class="main-nav__link" href="contacts.html">Контакти</a></li>
@@ -54,6 +55,7 @@
         <nav class="breadcrumbs" aria-label="Хлібні крихти">
           <ol>
             <li><a href="../index.html">Головна</a></li>
+            <li><a href="about.html">Про компанію</a></li>
             <li aria-current="page">Вибір квартири</li>
           </ol>
         </nav>
@@ -157,7 +159,7 @@
           <a class="logo logo--footer" href="../index.html">
             <img src="../assets/img/logo.svg" alt="Надія" width="301" height="122" loading="lazy">
           </a>
-          <p>Будуємо житло, в якому хочеться жити. Понад 15 років на ринку, 24 зданих будинки.</p>
+          <p>Будуємо житло, в якому хочеться жити. З 2010 року на ринку, 24 здані будинки. <a class="site-footer__more" href="about.html">Більше про нас</a></p>
         </div>
         <div>
           <h2 class="site-footer__title">Навігація</h2>
@@ -220,6 +222,14 @@
             <div><dt>Здача</dt><dd data-apt="completion"></dd></div>
           </dl>
           <p class="apt__price"><strong data-apt="price"></strong> <span class="muted" data-apt="ppm"></span></p>
+          <div class="apt-pay">
+            <p class="apt-pay__title">Розстрочка від забудовника</p>
+            <dl class="apt-pay__list">
+              <div><dt>Перший внесок 30%</dt><dd data-apt="first"></dd></div>
+              <div><dt>Щомісяця, <span data-apt="months"></span></dt><dd data-apt="monthly"></dd></div>
+            </dl>
+            <p class="apt-pay__note">Орієнтовний розрахунок до здачі будинку. <a href="property.html#purchase">Умови оплати</a></p>
+          </div>
           <button class="btn btn--primary btn--block" type="button" data-open-contact data-apt="cta">Забронювати квартиру</button>
           <p class="apt__note muted">Бронь безкоштовна та діє 3 дні. Ціна фіксується на дату договору.</p>
         </div>
@@ -236,6 +246,17 @@
       <h2 class="modal__title" id="contact-modal-title">Залиште заявку</h2>
       <p class="muted modal__text">Менеджер зателефонує протягом 15 хвилин у робочий час і відповість на всі запитання.</p>
       <form class="form js-contact-form" novalidate>
+        <fieldset class="filters__group request-types">
+          <legend class="form__label">Тип звернення</legend>
+          <div class="chips">
+            <label class="chip-check"><input type="radio" name="type" value="consultation" checked><span>Консультація в офісі</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="callback"><span>Зворотний дзвінок</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="booking"><span>Бронювання</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="viewing"><span>Перегляд об'єкта</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="online"><span>Онлайн-консультація</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="availability"><span>Уточнити наявність</span></label>
+          </div>
+        </fieldset>
         <div class="form__field">
           <label class="form__label" for="cm-name">Ваше ім'я</label>
           <input class="form__input" id="cm-name" name="name" type="text" autocomplete="name" required placeholder="Олена">

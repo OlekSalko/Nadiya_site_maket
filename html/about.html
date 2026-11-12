@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Про компанію — Надія Девелопмент</title>
+  <meta name="description" content="Надія Девелопмент — будівництво житлових комплексів, продаж квартир від забудовника.">
+  <meta name="theme-color" content="#0a223e">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <script src="../js/main.js" defer></script>
+</head>
+<body class="page-about">
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="../index.html">
+        <img src="../assets/img/logo.svg" alt="Надія — на головну" width="301" height="122">
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Головне меню">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="../index.html">Головна</a></li>
+          <li><a class="main-nav__link" href="about.html" aria-current="page">Про компанію</a></li>
+          <li><a class="main-nav__link" href="properties.html">Об'єкти</a></li>
+          <li><a class="main-nav__link" href="apartments.html">Вибір квартири</a></li>
+          <li><a class="main-nav__link" href="contacts.html">Контакти</a></li>
+        </ul>
+        <div class="main-nav__extra">
+          <a class="main-nav__phone" href="tel:+380441234567">+38 (044) 123-45-67</a>
+          <p class="main-nav__hours">Пн–Сб, 9:00–19:00</p>
+          <button class="btn btn--light btn--block" type="button" data-open-contact>Залишити заявку</button>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="header-phone" href="tel:+380441234567">+38 (044) 123-45-67</a>
+        <button class="btn btn--outline-light btn--sm header-cta" type="button" data-open-contact>Зв'язатися</button>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Відкрити меню">
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head on-dark">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлібні крихти">
+          <ol>
+            <li><a href="../index.html">Головна</a></li>
+            <li><a href="about.html">Про компанію</a></li>
+            <li aria-current="page">Про компанію</li>
+          </ol>
+        </nav>
+        <h1>Про компанію</h1>
+        <p class="page-head__text">«Надія Девелопмент» — забудовник повного циклу: від проєкту й власного бетону до обслуговування будинку після здачі.</p>
+      </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="section" aria-labelledby="mission-title">
+      <div class="container about-intro">
+        <figure class="about-intro__media">
+          <img src="../assets/img/aerial-tower.jpg" alt="Зданий житловий комплекс компанії з висоти" width="1280" height="720">
+        </figure>
+        <div class="about-intro__text">
+          <span class="eyebrow">Наша місія</span>
+          <h2 id="mission-title">Будуємо надію на власний дім</h2>
+          <p class="lead">Ми віримо, що власна квартира має бути доступною, безпечною та збудованою чесно — у строк і без компромісів у якості.</p>
+          <p>З 2010 року «Надія Девелопмент» звела 24 житлові будинки в Києві та області, де вже живуть понад 5 200 родин. Ми контролюємо весь процес: проєктування, виробництво бетону, будівельні роботи власними бригадами та обслуговування будинку після здачі.</p>
+          <blockquote class="about-quote">
+            <p>«Ми будуємо так, ніби самі будемо тут жити. Тому кожен будинок — це наша репутація на десятиліття вперед.»</p>
+            <footer>— Олександр Мельник, засновник компанії</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- Numbers -->
+    <section class="section stats stats--dark on-dark" aria-labelledby="about-stats-title">
+      <div class="container">
+        <h2 class="visually-hidden" id="about-stats-title">Компанія в цифрах</h2>
+        <ul class="stats__list stats__list--6">
+          <li class="stats__item"><span class="stats__value">16</span><span class="stats__label">років на ринку</span></li>
+          <li class="stats__item"><span class="stats__value">24</span><span class="stats__label">здані будинки</span></li>
+          <li class="stats__item"><span class="stats__value">3</span><span class="stats__label">ЖК в будівництві</span></li>
+          <li class="stats__item"><span class="stats__value">380<small> тис.</small></span><span class="stats__label">м² введено в експлуатацію</span></li>
+          <li class="stats__item"><span class="stats__value">5 200+</span><span class="stats__label">родин уже вдома</span></li>
+          <li class="stats__item"><span class="stats__value">420</span><span class="stats__label">працівників у штаті</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Values -->
+    <section class="section" aria-labelledby="values-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Цінності</span>
+            <h2 id="values-title">На чому тримається «Надія»</h2>
+          </div>
+        </div>
+        <ul class="grid grid--4">
+          <li class="feature">
+            <svg class="feature__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M15 14.5c3 0 6 1.8 6 5.5"/></svg>
+            <h3 class="feature__title">Професіоналізм</h3>
+            <p class="feature__text">Понад 420 фахівців у штаті: інженери, проєктувальники, юристи та власні бригади на кожному етапі будівництва.</p>
+          </li>
+          <li class="feature">
+            <svg class="feature__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+            <h3 class="feature__title">Якість</h3>
+            <p class="feature__text">Технагляд на кожному поверсі, сертифіковані матеріали та лабораторний контроль бетону з власного вузла.</p>
+          </li>
+          <li class="feature">
+            <svg class="feature__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg>
+            <h3 class="feature__title">Сервіс після здачі</h3>
+            <p class="feature__text">Власна керуюча компанія обслуговує будинки після введення в експлуатацію — без «передачі в нікуди».</p>
+          </li>
+          <li class="feature">
+            <svg class="feature__icon" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <h3 class="feature__title">Відповідальність</h3>
+            <p class="feature__text">Жодного «замороженого» об'єкта за 16 років. Будуємо чесно, у строк і відкрито звітуємо щомісяця.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- History -->
+    <section class="section section--alt" aria-labelledby="history-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Історія</span>
+            <h2 id="history-title">16 років — 24 будинки</h2>
+          </div>
+        </div>
+        <ol class="history">
+          <li class="history__item">
+            <span class="history__year">2010</span>
+            <h3 class="history__title">Заснування компанії</h3>
+            <p class="history__text">Перший 9-поверховий будинок в Ірпені на 72 квартири.</p>
+          </li>
+          <li class="history__item">
+            <span class="history__year">2013</span>
+            <h3 class="history__title">Власна техніка</h3>
+            <p class="history__text">Придбано перші баштові крани та бетононасос — будуємо без субпідрядників.</p>
+          </li>
+          <li class="history__item">
+            <span class="history__year">2016</span>
+            <h3 class="history__title">Вихід на Київ</h3>
+            <p class="history__text">Старт ЖК «Сімейний» та ЖК «Зелений Квартал» — 1 184 квартири.</p>
+          </li>
+          <li class="history__item">
+            <span class="history__year">2019</span>
+            <h3 class="history__title">Бетонний вузол</h3>
+            <p class="history__text">Власне виробництво бетону потужністю 60 м³/год і лабораторія контролю якості.</p>
+          </li>
+          <li class="history__item">
+            <span class="history__year">2023</span>
+            <h3 class="history__title">24-й зданий будинок</h3>
+            <p class="history__text">Введено в експлуатацію ЖК «Липовий Гай» на 412 квартир.</p>
+          </li>
+          <li class="history__item">
+            <span class="history__year">2026</span>
+            <h3 class="history__title">Нові проєкти</h3>
+            <p class="history__text">Будуються ЖК «Надія Парк», «Набережний» та «Сонячна Гавань».</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Production base -->
+    <section class="section" aria-labelledby="base-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Виробнича база</span>
+            <h2 id="base-title">Будуємо власними силами</h2>
+          </div>
+        </div>
+        <ul class="base grid grid--3">
+          <li class="base__item">
+            <img src="../assets/img/crane.jpg" alt="Баштовий кран компанії на будмайданчику" width="1280" height="720" loading="lazy">
+            <div class="base__body">
+              <h3>Парк техніки — 48 одиниць</h3>
+              <p class="muted">Баштові крани, бетононасоси, екскаватори та самоскиди. Не залежимо від підрядників і графіків оренди.</p>
+            </div>
+          </li>
+          <li class="base__item">
+            <img src="../assets/img/formwork.jpg" alt="Армування та опалубка колон" width="1280" height="720" loading="lazy">
+            <div class="base__body">
+              <h3>Бетонний вузол 60 м³/год</h3>
+              <p class="muted">Власне виробництво бетону з лабораторним контролем кожної партії — стабільна якість і нижча собівартість.</p>
+            </div>
+          </li>
+          <li class="base__item">
+            <img src="../assets/img/site-top.jpg" alt="Монолітні роботи на перекритті" width="1280" height="720" loading="lazy">
+            <div class="base__body">
+              <h3>Власні бригади</h3>
+              <p class="muted">Монолітники, монтажники та оздоблювальники в штаті компанії — відповідаємо за кожен етап.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Awards -->
+    <section class="section section--dark" aria-labelledby="awards-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Визнання</span>
+            <h2 id="awards-title">Нагороди</h2>
+          </div>
+        </div>
+        <ul class="awards grid grid--4">
+          <li class="award">
+            <svg class="award__icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg>
+            <span class="award__year">2025</span>
+            <h3 class="award__title">«Надійний забудовник року»</h3>
+            <p class="award__text">Рейтинг надійності забудовників Київщини</p>
+          </li>
+          <li class="award">
+            <svg class="award__icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg>
+            <span class="award__year">2024</span>
+            <h3 class="award__title">«Кращий житловий комплекс»</h3>
+            <p class="award__text">Премія «Девелопер року» — ЖК «Липовий Гай»</p>
+          </li>
+          <li class="award">
+            <svg class="award__icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg>
+            <span class="award__year">2022</span>
+            <h3 class="award__title">«Кращий роботодавець галузі»</h3>
+            <p class="award__text">Національний рейтинг роботодавців</p>
+          </li>
+          <li class="award">
+            <svg class="award__icon" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg>
+            <span class="award__year">2021</span>
+            <h3 class="award__title">«Енергоефективне будівництво»</h3>
+            <p class="award__text">Конкурс інноваційних рішень у будівництві</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section" aria-labelledby="team-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Команда</span>
+            <h2 id="team-title">Керівництво компанії</h2>
+          </div>
+        </div>
+        <ul class="team grid grid--4">
+          <li class="person">
+            <span class="person__avatar" aria-hidden="true">ОМ</span>
+            <h3 class="person__name">Олександр Мельник</h3>
+            <p class="person__role">Засновник і генеральний директор</p>
+          </li>
+          <li class="person">
+            <span class="person__avatar" aria-hidden="true">ІК</span>
+            <h3 class="person__name">Ірина Коваленко</h3>
+            <p class="person__role">Комерційна директорка</p>
+          </li>
+          <li class="person">
+            <span class="person__avatar" aria-hidden="true">ВБ</span>
+            <h3 class="person__name">Віктор Бондар</h3>
+            <p class="person__role">Головний інженер</p>
+          </li>
+          <li class="person">
+            <span class="person__avatar" aria-hidden="true">НШ</span>
+            <h3 class="person__name">Наталія Шевчук</h3>
+            <p class="person__role">Керівниця відділу продажу</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--alt cta" aria-labelledby="about-cta-title">
+      <div class="container cta__inner">
+        <div class="cta__text">
+          <span class="eyebrow">Знайомство з компанією</span>
+          <h2 id="about-cta-title">Запрошуємо на екскурсію будмайданчиком</h2>
+          <p class="lead">Покажемо, як ми будуємо: від бетонного вузла до готових квартир. Екскурсії безкоштовні, за попереднім записом.</p>
+        </div>
+        <div class="cta__form on-dark">
+          <form class="form js-contact-form" novalidate>
+            <div class="form__field">
+              <label class="form__label" for="ab-name">Ваше ім'я</label>
+              <input class="form__input" id="ab-name" name="name" type="text" autocomplete="name" required placeholder="Олена">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="ab-phone">Телефон</label>
+              <input class="form__input" id="ab-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__">
+            </div>
+            <label class="form__check">
+              <input type="checkbox" name="agree" required checked>
+              <span>Погоджуюсь на обробку персональних даних</span>
+            </label>
+            <button class="btn btn--light btn--block" type="submit">Записатися на екскурсію</button>
+          </form>
+          <div class="form-success" hidden>
+            <p class="form-success__title">Дякуємо!</p>
+            <p class="muted">Менеджер зв'яжеться з вами, щоб узгодити дату екскурсії.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="logo logo--footer" href="../index.html">
+            <img src="../assets/img/logo.svg" alt="Надія" width="301" height="122" loading="lazy">
+          </a>
+          <p>Будуємо житло, в якому хочеться жити. З 2010 року на ринку, 24 здані будинки. <a class="site-footer__more" href="about.html">Більше про нас</a></p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Навігація</h2>
+          <ul class="site-footer__list">
+            <li><a href="../index.html">Головна</a></li>
+            <li><a href="properties.html">Об'єкти</a></li>
+            <li><a href="apartments.html">Вибір квартири</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Відділ продажу</h2>
+          <ul class="site-footer__list">
+            <li><a href="tel:+380441234567">+38 (044) 123-45-67</a></li>
+            <li><a href="mailto:sales@nadiya.example">sales@nadiya.example</a></li>
+            <li>м. Київ, вул. Набережна, 12</li>
+            <li>Пн–Сб, 9:00–19:00</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Ми в соцмережах</h2>
+          <ul class="site-footer__social">
+            <li><a href="#" aria-label="Facebook">Fb</a></li>
+            <li><a href="#" aria-label="Instagram">Ig</a></li>
+            <li><a href="#" aria-label="YouTube">Yt</a></li>
+            <li><a href="#" aria-label="Telegram">Tg</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 ТОВ «Надія Девелопмент». Усі права захищено.</p>
+        <p>Інформація на сайті не є публічною офертою.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick-access contact button (every page) -->
+  <button class="fab" type="button" data-open-contact aria-label="Зв'язатися з відділом продажу">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+    <span class="fab__label">Зв'язатися</span>
+  </button>
+
+  <!-- Contact modal -->
+  <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрити">×</button>
+      <span class="eyebrow">Відділ продажу</span>
+      <h2 class="modal__title" id="contact-modal-title">Залиште заявку</h2>
+      <p class="muted modal__text">Менеджер зателефонує протягом 15 хвилин у робочий час і відповість на всі запитання.</p>
+      <form class="form js-contact-form" novalidate>
+        <fieldset class="filters__group request-types">
+          <legend class="form__label">Тип звернення</legend>
+          <div class="chips">
+            <label class="chip-check"><input type="radio" name="type" value="consultation" checked><span>Консультація в офісі</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="callback"><span>Зворотний дзвінок</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="booking"><span>Бронювання</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="viewing"><span>Перегляд об'єкта</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="online"><span>Онлайн-консультація</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="availability"><span>Уточнити наявність</span></label>
+          </div>
+        </fieldset>
+        <div class="form__field">
+          <label class="form__label" for="cm-name">Ваше ім'я</label>
+          <input class="form__input" id="cm-name" name="name" type="text" autocomplete="name" required placeholder="Олена">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="cm-phone">Телефон</label>
+          <input class="form__input" id="cm-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="cm-project">Житловий комплекс</label>
+          <select class="form__input" id="cm-project" name="project">
+            <option value="">Ще не визначився</option>
+            <option>ЖК «Надія Парк»</option>
+            <option>ЖК «Набережний»</option>
+            <option>ЖК «Сонячна Гавань»</option>
+          </select>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="cm-message">Коментар</label>
+          <textarea class="form__input" id="cm-message" name="message" rows="3" placeholder="Наприклад: цікавить 2-кімнатна до 3 млн грн"></textarea>
+        </div>
+        <label class="form__check">
+          <input type="checkbox" name="agree" required checked>
+          <span>Погоджуюсь на обробку персональних даних</span>
+        </label>
+        <button class="btn btn--primary btn--block" type="submit">Надіслати заявку</button>
+      </form>
+      <div class="form-success" hidden>
+        <p class="form-success__title">Дякуємо!</p>
+        <p class="muted">Заявку отримано. Ми зателефонуємо найближчим часом.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
