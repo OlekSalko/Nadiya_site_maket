@@ -744,3 +744,130 @@ html:has(.subnav) {
   bottom: 12px;
   box-shadow: var(--shadow);
 }
+
+/* --------------------------------------------------------------------------
+   Apartment search page
+   -------------------------------------------------------------------------- */
+.search__layout {
+  display: grid;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .search__layout {
+    grid-template-columns: 280px 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+}
+
+.results__bar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.apartments-grid {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 600px) {
+  .apartments-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1200px) {
+  .apartments-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+.apt-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.apt-card:hover {
+  box-shadow: var(--shadow);
+  transform: translateY(-3px);
+}
+
+.apt-card__plan {
+  padding: 16px 16px 0;
+}
+
+.apt-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+  padding: 16px;
+}
+
+.apt-card__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.apt-card__num {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.apt-card__title {
+  font-size: var(--fs-lg);
+}
+
+.apt-card__meta {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}
+
+.apt-card__price {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 4px 10px;
+  margin: auto 0 8px;
+  padding-top: 8px;
+}
+
+.apt-card__price strong {
+  font-size: 1.25rem;
+}
+
+.apt-card__price span {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+}
+
+.results__more {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.results__empty {
+  display: grid;
+  justify-items: center;
+  gap: 12px;
+  padding: 48px 16px;
+  text-align: center;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+}
+
+.results__empty-title {
+  font-size: var(--fs-h3);
+  font-weight: 700;
+}

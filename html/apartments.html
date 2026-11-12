@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/pages.css">
   <script src="../js/main.js" defer></script>
+  <script src="../js/data.js" defer></script>
+  <script src="../js/apartment-modal.js" defer></script>
+  <script src="../js/filters.js" defer></script>
 </head>
 <body class="page-apartments">
   <a class="skip-link" href="#main">Перейти до змісту</a>
@@ -46,6 +49,43 @@
   </header>
 
   <main id="main">
+    <section class="page-head on-dark">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлібні крихти">
+          <ol>
+            <li><a href="../index.html">Головна</a></li>
+            <li aria-current="page">Вибір квартири</li>
+          </ol>
+        </nav>
+        <h1>Вибір квартири</h1>
+        <p class="page-head__text">Усі квартири в житлових комплексах «Надія Девелопмент». Оберіть параметри — ми покажемо відповідні варіанти.</p>
+      </div>
+    </section>
+
+    <section class="section section--alt search">
+      <div class="container search__layout">
+        <!-- Filters -->
+        <aside class="filters" id="filters" aria-label="Фільтри">
+          <!-- filled in subtask 13 -->
+        </aside>
+
+        <!-- Results -->
+        <div class="results">
+          <div class="results__bar">
+            <p class="results__count" aria-live="polite"><strong data-count>0</strong> квартир знайдено</p>
+          </div>
+          <ul class="apartments-grid" data-results></ul>
+          <div class="results__more">
+            <button class="btn btn--outline" type="button" data-more>Показати ще</button>
+          </div>
+          <div class="results__empty" data-empty hidden>
+            <p class="results__empty-title">Нічого не знайдено</p>
+            <p class="muted">Спробуйте змінити параметри або залиште заявку — підберемо варіант вручну.</p>
+            <button class="btn btn--primary" type="button" data-open-contact data-message="Допоможіть підібрати квартиру">Підібрати з менеджером</button>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer">
@@ -97,6 +137,33 @@
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
     <span class="fab__label">Зв'язатися</span>
   </button>
+
+  <!-- Apartment details modal -->
+  <div class="modal" id="apartment-modal" role="dialog" aria-modal="true" aria-labelledby="apt-title" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog modal__dialog--wide">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрити">×</button>
+      <div class="apt">
+        <div class="apt__plan">
+          <img data-apt="plan" src="../assets/img/plans/plan-2.svg" alt="" width="320" height="240">
+        </div>
+        <div class="apt__info">
+          <span class="status" data-apt="status">Вільна</span>
+          <h2 class="apt__title" id="apt-title" data-apt="title">Квартира</h2>
+          <p class="muted" data-apt="project"></p>
+          <dl class="apt__facts">
+            <div><dt>Площа</dt><dd data-apt="area"></dd></div>
+            <div><dt>Поверх</dt><dd data-apt="floor"></dd></div>
+            <div><dt>Кімнат</dt><dd data-apt="rooms"></dd></div>
+            <div><dt>Здача</dt><dd data-apt="completion"></dd></div>
+          </dl>
+          <p class="apt__price"><strong data-apt="price"></strong> <span class="muted" data-apt="ppm"></span></p>
+          <button class="btn btn--primary btn--block" type="button" data-open-contact data-apt="cta">Забронювати квартиру</button>
+          <p class="apt__note muted">Бронь безкоштовна та діє 3 дні. Ціна фіксується на дату договору.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Contact modal -->
   <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" hidden>
