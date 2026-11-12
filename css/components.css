@@ -779,3 +779,26 @@ select.form__input {
 .on-dark .progress__track { background: rgba(255, 255, 255, 0.2); }
 .on-dark .progress__bar { background: var(--white); }
 .on-dark .progress__label { color: var(--navy-20); }
+
+/* Feature (advantage) ------------------------------------------------------ */
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 24px;
+  border: 1px solid var(--navy-10);
+  border-radius: var(--radius-lg);
+}
+
+.feature__icon {
+  color: var(--navy);
+}
+
+.feature__title {
+  font-size: var(--fs-lg);
+}
+
+.feature__text {
+  font-size: var(--fs-sm);
+  color: var(--text-muted);
+}

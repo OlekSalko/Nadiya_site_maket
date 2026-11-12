@@ -179,3 +179,98 @@
   font-size: var(--fs-sm);
   color: var(--text-muted);
 }
+
+/* --------------------------------------------------------------------------
+   Construction progress gallery (home + property page)
+   -------------------------------------------------------------------------- */
+.progress-gallery {
+  display: grid;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .progress-gallery {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .progress-gallery__item--main { grid-row: span 2; }
+}
+
+.progress-gallery__item {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  aspect-ratio: 16 / 10;
+}
+
+@media (min-width: 768px) {
+  .progress-gallery__item { aspect-ratio: auto; min-height: 200px; }
+}
+
+.progress-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.progress-gallery__item figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 32px 16px 14px;
+  background: linear-gradient(to top, rgba(10, 34, 62, 0.85), transparent);
+  font-size: var(--fs-sm);
+  font-weight: 500;
+}
+
+/* --------------------------------------------------------------------------
+   CTA block with form
+   -------------------------------------------------------------------------- */
+.cta__inner {
+  display: grid;
+  gap: 32px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .cta__inner { grid-template-columns: 1.1fr 1fr; gap: 64px; }
+}
+
+.cta__text h2 {
+  margin-bottom: 16px;
+}
+
+.cta__points {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.cta__points li {
+  position: relative;
+  padding-left: 28px;
+  font-weight: 500;
+}
+
+.cta__points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 14px;
+  height: 8px;
+  border-left: 2px solid var(--navy);
+  border-bottom: 2px solid var(--navy);
+  transform: rotate(-45deg);
+}
+
+.cta__form {
+  padding: 28px var(--gutter);
+  border-radius: var(--radius-lg);
+  margin-inline: calc(var(--gutter) * -1);
+}
+
+@media (min-width: 768px) {
+  .cta__form { padding: 40px; margin-inline: 0; }
+}
