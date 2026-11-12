@@ -1520,3 +1520,73 @@ html:has(.subnav) {
   font-size: var(--fs-sm);
   color: var(--text-muted);
 }
+
+/* --------------------------------------------------------------------------
+   Home: promo banner (installment plan)
+   -------------------------------------------------------------------------- */
+.promo {
+  position: relative;
+  overflow: hidden;
+  padding-block: 48px;
+  background:
+    linear-gradient(105deg, rgba(10, 34, 62, 0.97) 40%, rgba(10, 34, 62, 0.8)),
+    url("../assets/img/facade.jpg") center / cover no-repeat;
+}
+
+@media (min-width: 768px) {
+  .promo { padding-block: 64px; }
+}
+
+.promo__inner {
+  display: grid;
+  gap: 24px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .promo__inner { grid-template-columns: auto 1fr auto; gap: 48px; }
+}
+
+.promo__figure {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.promo__value {
+  font-size: 4.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+@media (min-width: 768px) {
+  .promo__value { font-size: 6rem; }
+}
+
+.promo__caption {
+  margin-top: 6px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--navy-20);
+}
+
+.promo__text h2 {
+  margin-bottom: 12px;
+}
+
+.promo__text p {
+  max-width: 560px;
+  color: var(--navy-10);
+}
+
+.promo__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+@media (min-width: 480px) and (max-width: 1023px) {
+  .promo__actions { flex-direction: row; }
+}
