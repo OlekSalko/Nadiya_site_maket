@@ -23,6 +23,10 @@
     nav.classList.toggle('is-open', open);
     header.classList.toggle('is-open', open);
     document.body.classList.toggle('is-locked', open);
+    if (open) {
+      var first = nav.querySelector('a');
+      if (first) setTimeout(function () { first.focus(); }, 50);
+    }
   }
 
   if (burger && nav) {
