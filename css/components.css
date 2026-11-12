@@ -174,7 +174,7 @@
   .header-cta { display: inline-flex; }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1360px) {
   .header-phone {
     display: inline;
     font-weight: 600;
@@ -287,7 +287,7 @@
 }
 
 /* Navigation: desktop inline */
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .burger { display: none; }
 
   .main-nav {
@@ -303,7 +303,7 @@
 
   .main-nav__list {
     flex-direction: row;
-    gap: 32px;
+    gap: 28px;
   }
 
   .main-nav__link {
@@ -311,7 +311,8 @@
     padding: 8px 0;
     font-size: var(--fs-sm);
     font-weight: 500;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
     border: 0;
   }
 
