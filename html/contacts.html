@@ -91,5 +91,54 @@
       </div>
     </div>
   </footer>
+
+  <!-- Quick-access contact button (every page) -->
+  <button class="fab" type="button" data-open-contact aria-label="Зв'язатися з відділом продажу">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+    <span class="fab__label">Зв'язатися</span>
+  </button>
+
+  <!-- Contact modal -->
+  <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрити">×</button>
+      <span class="eyebrow">Відділ продажу</span>
+      <h2 class="modal__title" id="contact-modal-title">Залиште заявку</h2>
+      <p class="muted modal__text">Менеджер зателефонує протягом 15 хвилин у робочий час і відповість на всі запитання.</p>
+      <form class="form js-contact-form" novalidate>
+        <div class="form__field">
+          <label class="form__label" for="cm-name">Ваше ім'я</label>
+          <input class="form__input" id="cm-name" name="name" type="text" autocomplete="name" required placeholder="Олена">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="cm-phone">Телефон</label>
+          <input class="form__input" id="cm-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="cm-project">Житловий комплекс</label>
+          <select class="form__input" id="cm-project" name="project">
+            <option value="">Ще не визначився</option>
+            <option>ЖК «Надія Парк»</option>
+            <option>ЖК «Набережний»</option>
+            <option>ЖК «Сонячна Гавань»</option>
+          </select>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="cm-message">Коментар</label>
+          <textarea class="form__input" id="cm-message" name="message" rows="3" placeholder="Наприклад: цікавить 2-кімнатна до 3 млн грн"></textarea>
+        </div>
+        <label class="form__check">
+          <input type="checkbox" name="agree" required checked>
+          <span>Погоджуюсь на обробку персональних даних</span>
+        </label>
+        <button class="btn btn--primary btn--block" type="submit">Надіслати заявку</button>
+      </form>
+      <div class="form-success" hidden>
+        <p class="form-success__title">Дякуємо!</p>
+        <p class="muted">Заявку отримано. Ми зателефонуємо найближчим часом.</p>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
