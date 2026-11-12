@@ -1539,3 +1539,289 @@ html:has(.subnav) {
   border-bottom: 2px solid var(--navy);
   transform: rotate(-45deg);
 }
+
+/* --------------------------------------------------------------------------
+   Construction photo chronicle (animated timeline, property page)
+   -------------------------------------------------------------------------- */
+.chrono {
+  display: grid;
+  gap: 20px;
+}
+
+.chrono__stage {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  aspect-ratio: 4 / 3;
+  background: var(--navy);
+}
+
+@media (min-width: 768px) {
+  .chrono__stage { aspect-ratio: 21 / 8; }
+}
+
+.chrono__slide {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.chrono__slide.is-active {
+  opacity: 1;
+}
+
+.chrono__slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.06);
+  transition: transform 4.5s ease-out;
+}
+
+/* Slow "Ken Burns" zoom while a slide is shown */
+.chrono__slide.is-active img {
+  transform: scale(1);
+}
+
+.chrono__slide figcaption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 72px 20px 18px;
+  background: linear-gradient(to top, rgba(10, 34, 62, 0.92), rgba(10, 34, 62, 0));
+  color: var(--white);
+  font-size: var(--fs-sm);
+}
+
+@media (min-width: 768px) {
+  .chrono__slide figcaption { padding: 96px 28px 24px; font-size: var(--fs-base); }
+}
+
+.chrono__info {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  pointer-events: none;
+}
+
+.chrono__date,
+.chrono__title,
+.chrono__count {
+  padding: 6px 12px;
+  border-radius: var(--radius);
+  font-size: var(--fs-xs);
+  font-weight: 600;
+}
+
+.chrono__date {
+  background: var(--white);
+  color: var(--navy);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.chrono__title {
+  background: rgba(10, 34, 62, 0.85);
+  color: var(--white);
+}
+
+.chrono__count {
+  margin-left: auto;
+  background: rgba(10, 34, 62, 0.6);
+  color: var(--white);
+}
+
+/* Scale */
+.chrono__scale {
+  position: relative;
+  padding: 0 18px 44px;
+}
+
+.chrono__track {
+  position: relative;
+  height: 28px;
+  cursor: pointer;
+  touch-action: none; /* allow horizontal drag on touch screens */
+}
+
+.chrono__track::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 4px;
+  margin-top: -2px;
+  border-radius: 2px;
+  background: var(--navy-20);
+}
+
+.chrono__fill {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 4px;
+  margin-top: -2px;
+  border-radius: 2px;
+  background: var(--navy);
+  transition: width 0.45s ease;
+}
+
+.chrono__thumb {
+  position: absolute;
+  top: 50%;
+  width: 28px;
+  height: 28px;
+  margin: -14px 0 0 -14px;
+  border: 4px solid var(--white);
+  border-radius: 50%;
+  background: var(--navy);
+  box-shadow: 0 2px 10px rgba(10, 34, 62, 0.35);
+  cursor: grab;
+  transition: left 0.45s ease, transform 0.2s ease;
+  z-index: 2;
+}
+
+.chrono__thumb:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Gentle pulse on the thumb while autoplay runs */
+.chrono.is-playing .chrono__thumb {
+  animation: chrono-pulse 2s ease-in-out infinite;
+}
+
+@keyframes chrono-pulse {
+  0%, 100% { box-shadow: 0 2px 10px rgba(10, 34, 62, 0.35), 0 0 0 0 rgba(10, 34, 62, 0.25); }
+  50% { box-shadow: 0 2px 10px rgba(10, 34, 62, 0.35), 0 0 0 8px rgba(10, 34, 62, 0); }
+}
+
+.chrono.is-dragging .chrono__thumb {
+  cursor: grabbing;
+  transform: scale(1.15);
+  transition: transform 0.2s ease; /* follow the pointer without lag */
+}
+
+.chrono.is-dragging .chrono__fill {
+  transition: none;
+}
+
+.chrono.is-dragging .chrono__stage {
+  user-select: none;
+}
+
+/* Stage markers under the scale */
+.chrono__markers {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  top: 0;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  pointer-events: none;
+}
+
+.chrono__marker {
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.chrono__marker::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  width: 12px;
+  height: 12px;
+  margin-left: -6px;
+  border: 2px solid var(--navy-50);
+  border-radius: 50%;
+  background: var(--white);
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.chrono__marker--done::before,
+.chrono__marker--current::before,
+.chrono__marker.is-passed::before,
+.chrono__marker.is-active::before {
+  border-color: var(--navy);
+  background: var(--navy);
+}
+
+.chrono__marker-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  padding: 2px 4px;
+  font-size: var(--fs-xs);
+  line-height: 1.25;
+  color: var(--text-muted);
+  white-space: nowrap;
+  pointer-events: auto;
+  transition: color var(--transition);
+}
+
+.chrono__marker-btn:hover,
+.chrono__marker.is-active .chrono__marker-btn {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+@media (min-width: 768px) {
+  .chrono__marker-btn { flex-direction: row; gap: 4px; font-size: var(--fs-sm); }
+}
+
+.chrono__hint {
+  font-size: var(--fs-sm);
+}
+
+/* Play / pause toggle */
+.chrono__toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 16px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--white);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+
+.chrono__toggle:hover {
+  border-color: var(--navy);
+}
+
+.chrono__toggle-icon {
+  width: 10px;
+  height: 12px;
+  border-left: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+}
+
+.chrono__toggle.is-paused .chrono__toggle-icon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 6px 0 6px 10px;
+  border-color: transparent transparent transparent currentColor;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chrono__slide img,
+  .chrono__slide.is-active img { transform: none; transition: none; }
+}
