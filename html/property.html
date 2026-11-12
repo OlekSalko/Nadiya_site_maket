@@ -15,6 +15,7 @@
   <script src="../js/data.js" defer></script>
   <script src="../js/apartment-modal.js" defer></script>
   <script src="../js/chessboard.js" defer></script>
+  <script src="../js/subnav.js" defer></script>
 </head>
 <body class="page-property">
   <a class="skip-link" href="#main">Перейти до змісту</a>
@@ -170,6 +171,126 @@
             <div class="chess__grid" role="grid" aria-label="Квартири за поверхами"></div>
           </div>
           <p class="chess__hint muted">Натисніть на квартиру, щоб переглянути планування та ціну. 1-й поверх — комерційні приміщення.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Construction progress -->
+    <section class="section" id="progress" aria-labelledby="progress-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Оновлено 1 листопада 2026</span>
+            <h2 id="progress-title">Хід будівництва</h2>
+          </div>
+        </div>
+        <ol class="timeline">
+          <li class="timeline__item is-done"><span class="timeline__date">II кв. 2025</span><span class="timeline__text">Отримано дозвіл, котлован</span></li>
+          <li class="timeline__item is-done"><span class="timeline__date">IV кв. 2025</span><span class="timeline__text">Фундамент і паркінг</span></li>
+          <li class="timeline__item is-current"><span class="timeline__date">IV кв. 2026</span><span class="timeline__text">Монолітний каркас: 9 з 16 поверхів</span></li>
+          <li class="timeline__item"><span class="timeline__date">II кв. 2027</span><span class="timeline__text">Фасад, інженерні мережі</span></li>
+          <li class="timeline__item"><span class="timeline__date">IV кв. 2027</span><span class="timeline__text">Введення в експлуатацію</span></li>
+        </ol>
+        <div class="progress-gallery">
+          <figure class="progress-gallery__item progress-gallery__item--main">
+            <img src="../assets/img/site-top.jpg" alt="Монолітні роботи на перекритті" width="1280" height="720" loading="lazy">
+            <figcaption>Жовтень 2026 — заливка перекриття 9-го поверху</figcaption>
+          </figure>
+          <figure class="progress-gallery__item">
+            <img src="../assets/img/crane.jpg" alt="Монтаж опалубки краном" width="1280" height="720" loading="lazy">
+            <figcaption>Монтаж опалубки</figcaption>
+          </figure>
+          <figure class="progress-gallery__item">
+            <img src="../assets/img/formwork.jpg" alt="Армування колон" width="1280" height="720" loading="lazy">
+            <figcaption>Армування колон</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location -->
+    <section class="section section--alt" id="location" aria-labelledby="location-title">
+      <div class="container location">
+        <div class="location__text">
+          <span class="eyebrow">Розташування</span>
+          <h2 id="location-title">Усе потрібне — поруч</h2>
+          <p class="muted">вул. Паркова, 8, Голосіївський р-н, Київ</p>
+          <ul class="nearby">
+            <li><span>Метро «Деміївська»</span><span>10 хв пішки</span></li>
+            <li><span>Голосіївський парк</span><span>5 хв пішки</span></li>
+            <li><span>Школа № 150, дитячий садок</span><span>7 хв пішки</span></li>
+            <li><span>ТРЦ «Океан Плаза»</span><span>12 хв авто</span></li>
+            <li><span>Центр міста</span><span>20 хв авто</span></li>
+          </ul>
+        </div>
+        <div class="map">
+          <svg class="map__svg" viewBox="0 0 600 400" role="img" aria-label="Схема розташування ЖК «Надія Парк»">
+              <rect width="600" height="400" fill="#e7e9ec"/>
+              <path d="M0 260 C120 240 200 300 330 280 S520 230 600 250 L600 400 L0 400Z" fill="#ced3d8"/>
+              <rect x="360" y="40" width="200" height="150" rx="16" fill="#ced3d8"/>
+              <text x="460" y="120" text-anchor="middle" font-size="14" fill="#4a5d73" font-family="system-ui, sans-serif">Голосіївський парк</text>
+              <g stroke="#fff" stroke-width="14" fill="none" stroke-linecap="round">
+                <path d="M0 200 H600"/>
+                <path d="M300 0 V400"/>
+                <path d="M80 0 L200 400"/>
+              </g>
+              <g stroke="#fff" stroke-width="6" fill="none">
+                <path d="M0 90 H300"/>
+                <path d="M300 330 H600"/>
+                <path d="M450 200 V400"/>
+              </g>
+              <circle cx="120" cy="200" r="12" fill="#0a223e"/>
+              <text x="120" y="205" text-anchor="middle" font-size="12" font-weight="700" fill="#fff" font-family="system-ui, sans-serif">М</text>
+              <text x="120" y="232" text-anchor="middle" font-size="12" fill="#0a223e" font-family="system-ui, sans-serif">Деміївська</text>
+              <g transform="translate(330 150)">
+                <circle r="34" fill="#0a223e" opacity="0.15"/>
+                <path d="M0 -38 C-16 -38 -26 -26 -26 -12 C-26 6 0 26 0 26 C0 26 26 6 26 -12 C26 -26 16 -38 0 -38Z" fill="#0a223e" transform="translate(0 -8)"/>
+                <circle cy="-20" r="8" fill="#fff"/>
+              </g>
+              <text x="372" y="160" font-size="14" font-weight="700" fill="#0a223e" font-family="system-ui, sans-serif">ЖК «Надія Парк»</text>
+            </svg>
+          <a class="map__link btn btn--light btn--sm" href="https://maps.google.com/?q=50.4,30.52" target="_blank" rel="noopener">Відкрити на карті</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Request form -->
+    <section class="section cta" id="request" aria-labelledby="request-title">
+      <div class="container cta__inner">
+        <div class="cta__text">
+          <span class="eyebrow">ЖК «Надія Парк»</span>
+          <h2 id="request-title">Запишіться на перегляд</h2>
+          <p class="lead">Покажемо будмайданчик, шоурум з оздобленням та розрахуємо індивідуальний графік платежів.</p>
+          <ul class="cta__points">
+            <li>Екскурсії щодня з 10:00 до 18:00</li>
+            <li>Розтермінування до 36 місяців</li>
+            <li>Знижка 5% при 100% оплаті</li>
+          </ul>
+        </div>
+        <div class="cta__form on-dark">
+          <form class="form js-contact-form" novalidate>
+            <div class="form__field">
+              <label class="form__label" for="rq-name">Ваше ім'я</label>
+              <input class="form__input" id="rq-name" name="name" type="text" autocomplete="name" required placeholder="Олена">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="rq-phone">Телефон</label>
+              <input class="form__input" id="rq-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="rq-date">Бажана дата візиту</label>
+              <input class="form__input" id="rq-date" name="date" type="date">
+            </div>
+            <label class="form__check">
+              <input type="checkbox" name="agree" required checked>
+              <span>Погоджуюсь на обробку персональних даних</span>
+            </label>
+            <button class="btn btn--light btn--block" type="submit">Записатися</button>
+          </form>
+          <div class="form-success" hidden>
+            <p class="form-success__title">Дякуємо!</p>
+            <p class="muted">Менеджер зв'яжеться з вами, щоб підтвердити час візиту.</p>
+          </div>
         </div>
       </div>
     </section>
