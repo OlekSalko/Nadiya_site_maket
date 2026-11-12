@@ -10,9 +10,86 @@
   <link rel="stylesheet" href="../css/base.css">
   <link rel="stylesheet" href="../css/components.css">
   <link rel="stylesheet" href="../css/pages.css">
+  <script src="../js/main.js" defer></script>
 </head>
 <body class="page-apartments">
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="../index.html">
+        <img src="../assets/img/logo.svg" alt="Надія — на головну" width="301" height="122">
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Головне меню">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="../index.html">Головна</a></li>
+          <li><a class="main-nav__link" href="properties.html">Об'єкти</a></li>
+          <li><a class="main-nav__link" href="apartments.html" aria-current="page">Вибір квартири</a></li>
+          <li><a class="main-nav__link" href="contacts.html">Контакти</a></li>
+        </ul>
+        <div class="main-nav__extra">
+          <a class="main-nav__phone" href="tel:+380441234567">+38 (044) 123-45-67</a>
+          <p class="main-nav__hours">Пн–Сб, 9:00–19:00</p>
+          <button class="btn btn--light btn--block" type="button" data-open-contact>Залишити заявку</button>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="header-phone" href="tel:+380441234567">+38 (044) 123-45-67</a>
+        <button class="btn btn--outline-light btn--sm header-cta" type="button" data-open-contact>Зв'язатися</button>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Відкрити меню">
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
   <main id="main">
   </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="logo logo--footer" href="../index.html">
+            <img src="../assets/img/logo.svg" alt="Надія" width="301" height="122" loading="lazy">
+          </a>
+          <p>Будуємо житло, в якому хочеться жити. Понад 15 років на ринку, 24 зданих будинки.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Навігація</h2>
+          <ul class="site-footer__list">
+            <li><a href="../index.html">Головна</a></li>
+            <li><a href="properties.html">Об'єкти</a></li>
+            <li><a href="apartments.html">Вибір квартири</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Відділ продажу</h2>
+          <ul class="site-footer__list">
+            <li><a href="tel:+380441234567">+38 (044) 123-45-67</a></li>
+            <li><a href="mailto:sales@nadiya.example">sales@nadiya.example</a></li>
+            <li>м. Київ, вул. Набережна, 12</li>
+            <li>Пн–Сб, 9:00–19:00</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Ми в соцмережах</h2>
+          <ul class="site-footer__social">
+            <li><a href="#" aria-label="Facebook">Fb</a></li>
+            <li><a href="#" aria-label="Instagram">Ig</a></li>
+            <li><a href="#" aria-label="YouTube">Yt</a></li>
+            <li><a href="#" aria-label="Telegram">Tg</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 ТОВ «Надія Девелопмент». Усі права захищено.</p>
+        <p>Інформація на сайті не є публічною офертою.</p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
