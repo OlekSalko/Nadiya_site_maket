@@ -13,6 +13,10 @@
   --navy-05: #f3f4f6;
   --white: #ffffff;
 
+  /* Accent: only for the floating contact button */
+  --accent: #1e88e5;
+  --accent-dark: #1976d2;
+
   /* Semantic */
   --bg: var(--white);
   --bg-alt: var(--navy-05);

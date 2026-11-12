@@ -436,19 +436,19 @@
   gap: 10px;
   height: 56px;
   padding: 0 20px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 28px;
-  background: var(--navy);
+  background: var(--accent);
   color: var(--white);
   font-size: var(--fs-sm);
-  font-weight: 600;
-  box-shadow: 0 10px 30px rgba(10, 34, 62, 0.35);
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(30, 136, 229, 0.45);
   transition: transform var(--transition), background var(--transition);
 }
 
 .fab:hover {
   transform: translateY(-2px);
-  background: var(--navy-90);
+  background: var(--accent-dark);
 }
 
 .fab::before {
@@ -456,7 +456,7 @@
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  border: 2px solid var(--navy);
+  border: 2px solid var(--accent);
   animation: fab-pulse 2.4s ease-out infinite;
   pointer-events: none;
 }
