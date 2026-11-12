@@ -93,6 +93,7 @@
   position: sticky;
   top: 0;
   z-index: 50;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
   background: var(--navy);
   color: var(--white);
   transition: background var(--transition), box-shadow var(--transition);
@@ -127,10 +128,28 @@
   flex-shrink: 0;
   position: relative;
   z-index: 2;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.logo__caption {
+  font-size: 0.5rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--white);
+}
+
+@media (min-width: 768px) {
+  .logo__caption { font-size: 0.5625rem; letter-spacing: 0.1em; }
 }
 
 .logo img {
-  width: 96px;
+  width: 88px;
   height: auto;
 }
 
@@ -155,7 +174,7 @@
   .header-cta { display: inline-flex; }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1360px) {
   .header-phone {
     display: inline;
     font-weight: 600;
@@ -268,7 +287,7 @@
 }
 
 /* Navigation: desktop inline */
-@media (min-width: 1024px) {
+@media (min-width: 1200px) {
   .burger { display: none; }
 
   .main-nav {
@@ -284,7 +303,7 @@
 
   .main-nav__list {
     flex-direction: row;
-    gap: 32px;
+    gap: 28px;
   }
 
   .main-nav__link {
@@ -292,7 +311,8 @@
     padding: 8px 0;
     font-size: var(--fs-sm);
     font-weight: 500;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
     border: 0;
   }
 
@@ -322,6 +342,7 @@
 
 /* Footer ------------------------------------------------------------------- */
 .site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
   background: var(--navy);
   color: var(--navy-20);
   font-size: var(--fs-sm);
@@ -340,11 +361,6 @@
 
 @media (min-width: 1200px) {
   .site-footer__grid { grid-template-columns: 1.6fr 1fr 1.2fr 1fr; }
-}
-
-.site-footer__brand p {
-  max-width: 320px;
-  margin-top: 16px;
 }
 
 .logo--footer img {
@@ -421,19 +437,19 @@
   gap: 10px;
   height: 56px;
   padding: 0 20px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
   border-radius: 28px;
-  background: var(--navy);
+  background: var(--accent);
   color: var(--white);
   font-size: var(--fs-sm);
-  font-weight: 600;
-  box-shadow: 0 10px 30px rgba(10, 34, 62, 0.35);
+  font-weight: 700;
+  box-shadow: 0 10px 30px rgba(30, 136, 229, 0.45);
   transition: transform var(--transition), background var(--transition);
 }
 
 .fab:hover {
   transform: translateY(-2px);
-  background: var(--navy-90);
+  background: var(--accent-dark);
 }
 
 .fab::before {
@@ -441,7 +457,7 @@
   position: absolute;
   inset: -1px;
   border-radius: inherit;
-  border: 2px solid var(--navy);
+  border: 2px solid var(--accent);
   animation: fab-pulse 2.4s ease-out infinite;
   pointer-events: none;
 }
@@ -805,27 +821,34 @@ select.form__input {
 
 /* Page head (inner pages) -------------------------------------------------- */
 .page-head {
-  padding: 32px 0 40px;
+  padding: 20px 0 24px;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--navy-10);
 }
 
 @media (min-width: 768px) {
-  .page-head { padding: 48px 0 64px; }
+  .page-head { padding: 28px 0 36px; }
 }
 
 .page-head h1 {
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  font-size: 1.75rem;
+}
+
+@media (min-width: 768px) {
+  .page-head h1 { font-size: 2.25rem; }
 }
 
 .page-head__text {
   max-width: 640px;
-  color: var(--navy-20);
-  font-size: var(--fs-lg);
+  color: var(--text-muted);
+  font-size: var(--fs-base);
 }
 
 .breadcrumbs {
-  margin-bottom: 20px;
-  font-size: var(--fs-sm);
-  color: var(--navy-20);
+  margin-bottom: 12px;
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
 }
 
 .breadcrumbs ol {
@@ -843,8 +866,14 @@ select.form__input {
   color: var(--navy-50);
 }
 
+.breadcrumbs [aria-current="page"] {
+  color: var(--navy);
+  font-weight: 600;
+}
+
 .breadcrumbs a:hover {
-  color: var(--white);
+  color: var(--navy);
+  text-decoration: underline;
 }
 
 /* Tabs --------------------------------------------------------------------- */
@@ -1041,21 +1070,4 @@ select.form__input {
 .apt__note {
   font-size: var(--fs-xs);
   text-align: center;
-}
-
-.site-footer__more {
-  color: var(--white);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-/* Request type chips in contact forms */
-.request-types .chips {
-  gap: 6px;
-}
-
-.request-types .chip-check span {
-  min-height: 36px;
-  padding: 6px 12px;
-  font-size: var(--fs-xs);
 }

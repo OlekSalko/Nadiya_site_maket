@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Співпраця — Надія Девелопмент</title>
+  <meta name="description" content="Надія Девелопмент — будівництво житлових комплексів, продаж квартир від забудовника.">
+  <meta name="theme-color" content="#0a223e">
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <script src="../js/main.js" defer></script>
+  <script src="../js/tabs.js" defer></script>
+  <script src="../js/cooperation.js" defer></script>
+</head>
+<body class="page-cooperation">
+  <a class="skip-link" href="#main">Перейти до змісту</a>
+
+  <header class="site-header" id="top">
+    <div class="container site-header__inner">
+      <a class="logo" href="../index.html">
+        <img src="../assets/img/logo.svg" alt="Надія — на головну" width="301" height="122">
+        <span class="logo__caption">Будівельна компанія</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Головне меню">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link" href="../index.html">Головна</a></li>
+          <li><a class="main-nav__link" href="about.html">Про компанію</a></li>
+          <li><a class="main-nav__link" href="properties.html">Об'єкти</a></li>
+          <li><a class="main-nav__link" href="apartments.html">Вибір квартири</a></li>
+          <li><a class="main-nav__link" href="cooperation.html" aria-current="page">Співпраця</a></li>
+          <li><a class="main-nav__link" href="contacts.html">Контакти</a></li>
+        </ul>
+        <div class="main-nav__extra">
+          <a class="main-nav__phone" href="tel:+380441234567">+38 (044) 123-45-67</a>
+          <p class="main-nav__hours">Пн–Сб, 9:00–19:00</p>
+          <button class="btn btn--light btn--block" type="button" data-open-contact>Залишити заявку</button>
+        </div>
+      </nav>
+
+      <div class="site-header__actions">
+        <a class="header-phone" href="tel:+380441234567">+38 (044) 123-45-67</a>
+        <button class="btn btn--outline-light btn--sm header-cta" type="button" data-open-contact>Зв'язатися</button>
+        <button class="burger" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Відкрити меню">
+          <span class="burger__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Хлібні крихти">
+          <ol>
+            <li><a href="../index.html">Головна</a></li>
+            <li aria-current="page">Співпраця</li>
+          </ol>
+        </nav>
+        <h1>Співпраця</h1>
+        <p class="page-head__text">Шукаємо фахівців у команду, підрядників і постачальників для довгострокової співпраці.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="tabs" data-tabs>
+          <div class="tabs__list" role="tablist" aria-label="Напрями співпраці">
+            <button class="tabs__tab" type="button" role="tab" id="tab-vacancies" aria-controls="panel-vacancies" aria-selected="true" data-request-type="employment">Вакансії <span class="tabs__count">7</span></button>
+            <button class="tabs__tab" type="button" role="tab" id="tab-contracting" aria-controls="panel-contracting" aria-selected="false" tabindex="-1" data-request-type="contracting">Генпідряд</button>
+            <button class="tabs__tab" type="button" role="tab" id="tab-supply" aria-controls="panel-supply" aria-selected="false" tabindex="-1" data-request-type="supply">Постачальникам</button>
+          </div>
+
+          <!-- Vacancies -->
+          <div class="tabs__panel" role="tabpanel" id="panel-vacancies" aria-labelledby="tab-vacancies" tabindex="0">
+            <div class="coop-intro">
+              <h2>Приєднуйтесь до команди «Надії»</h2>
+              <p class="muted">Офіційне працевлаштування з першого дня, стабільна зарплата без затримок, спецодяг і навчання. Понад 420 людей уже будують з нами.</p>
+            </div>
+            <ul class="vacancies">
+            <li class="vacancy">
+              <div class="vacancy__head">
+                <h3 class="vacancy__title">Інженер ПТО</h3>
+                <span class="vacancy__salary">від 40 000 ₴</span>
+              </div>
+              <p class="vacancy__meta">Київ, офіс + об'єкти · повна зайнятість</p>
+              <ul class="vacancy__list">
+                <li>Вища технічна освіта (ПЦБ)</li>
+                <li>Досвід у ПТО від 2 років</li>
+                <li>Знання ДБН, AutoCAD, кошторисних програм</li>
+              </ul>
+              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Інженер ПТО">Відгукнутися</button>
+            </li>
+            <li class="vacancy">
+              <div class="vacancy__head">
+                <h3 class="vacancy__title">Виконроб</h3>
+                <span class="vacancy__salary">від 50 000 ₴</span>
+              </div>
+              <p class="vacancy__meta">Київ, ЖК «Надія Парк» · повна зайнятість</p>
+              <ul class="vacancy__list">
+                <li>Досвід керування монолітними роботами від 3 років</li>
+                <li>Вміння читати проєктну документацію</li>
+                <li>Організація роботи бригад і субпідрядників</li>
+              </ul>
+              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Виконроб">Відгукнутися</button>
+            </li>
+            <li class="vacancy">
+              <div class="vacancy__head">
+                <h3 class="vacancy__title">Монолітник</h3>
+                <span class="vacancy__salary">від 35 000 ₴</span>
+              </div>
+              <p class="vacancy__meta">Київ та область · повна зайнятість</p>
+              <ul class="vacancy__list">
+                <li>Досвід монолітних робіт від 1 року</li>
+                <li>Робота з опалубкою, бетонування</li>
+                <li>Офіційне працевлаштування, спецодяг</li>
+              </ul>
+              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Монолітник">Відгукнутися</button>
+            </li>
+            <li class="vacancy">
+              <div class="vacancy__head">
+                <h3 class="vacancy__title">Арматурник</h3>
+                <span class="vacancy__salary">від 33 000 ₴</span>
+              </div>
+              <p class="vacancy__meta">Київ та область · повна зайнятість</p>
+              <ul class="vacancy__list">
+                <li>Досвід в'язання арматурних каркасів</li>
+                <li>Читання арматурних креслень</li>
+                <li>Можливе навчання на об'єкті</li>
+              </ul>
+              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Арматурник">Відгукнутися</button>
+            </li>
+            <li class="vacancy">
+              <div class="vacancy__head">
+                <h3 class="vacancy__title">Машиніст баштового крана</h3>
+                <span class="vacancy__salary">від 45 000 ₴</span>
+              </div>
+              <p class="vacancy__meta">Київ, Бровари · повна зайнятість</p>
+              <ul class="vacancy__list">
+                <li>Посвідчення машиніста крана</li>
+                <li>Досвід роботи від 2 років</li>
+                <li>Графік 5/2, оплата понаднормових</li>
+              </ul>
+              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Машиніст баштового крана">Відгукнутися</button>
+            </li>
+            <li class="vacancy">
+              <div class="vacancy__head">
+                <h3 class="vacancy__title">Електромонтажник</h3>
+                <span class="vacancy__salary">від 36 000 ₴</span>
+              </div>
+              <p class="vacancy__meta">Київ та область · повна зайнятість</p>
+              <ul class="vacancy__list">
+                <li>Група з електробезпеки не нижче III</li>
+                <li>Монтаж внутрішніх мереж житлових будинків</li>
+                <li>Власний інструмент — перевага</li>
+              </ul>
+              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Електромонтажник">Відгукнутися</button>
+            </li>
+            <li class="vacancy">
+              <div class="vacancy__head">
+                <h3 class="vacancy__title">Менеджер з продажу нерухомості</h3>
+                <span class="vacancy__salary">ставка + %</span>
+              </div>
+              <p class="vacancy__meta">Київ, офіс продажу · повна зайнятість</p>
+              <ul class="vacancy__list">
+                <li>Досвід продажів від 1 року</li>
+                <li>Грамотне усне й письмове мовлення</li>
+                <li>Робота з CRM, ведення клієнта до угоди</li>
+              </ul>
+              <button class="btn btn--outline btn--sm" type="button" data-open-contact data-request-type="employment" data-message="Відгук на вакансію: Менеджер з продажу нерухомості">Відгукнутися</button>
+            </li>
+            </ul>
+            <p class="coop-note">Не знайшли свою вакансію? Надішліть резюме на <a href="mailto:hr@nadiya.example">hr@nadiya.example</a> або залиште заявку нижче — ми зв'яжемося, щойно з'явиться відповідна позиція.</p>
+          </div>
+
+          <!-- General contracting -->
+          <div class="tabs__panel" role="tabpanel" id="panel-contracting" aria-labelledby="tab-contracting" tabindex="0" hidden>
+            <div class="coop-intro">
+              <h2>Генпідрядні роботи</h2>
+              <p class="muted">Виконуємо будівництво «під ключ» для приватних і комерційних замовників — з власною технікою, бетоном і бригадами.</p>
+            </div>
+            <ul class="coop-grid">
+            <li class="coop-card">
+              <h3 class="coop-card__title">Монолітні та каркасні роботи</h3>
+              <p class="coop-card__text">Фундаменти, каркаси, перекриття житлових і комерційних будівель.</p>
+            </li>
+            <li class="coop-card">
+              <h3 class="coop-card__title">Загальнобудівельні роботи</h3>
+              <p class="coop-card__text">Кладка, покрівля, фасади, оздоблення місць загального користування.</p>
+            </li>
+            <li class="coop-card">
+              <h3 class="coop-card__title">Інженерні мережі</h3>
+              <p class="coop-card__text">Електропостачання, опалення, водопостачання та каналізація.</p>
+            </li>
+            <li class="coop-card">
+              <h3 class="coop-card__title">Благоустрій</h3>
+              <p class="coop-card__text">Дороги, тротуари, дитячі майданчики, озеленення території.</p>
+            </li>
+            </ul>
+            <div class="coop-terms">
+              <h3>Умови співпраці</h3>
+              <ul class="pay-card__list">
+                <li>Договір генпідряду з фіксованим кошторисом та графіком робіт</li>
+                <li>Гарантія на виконані роботи — 10 років на конструктив</li>
+                <li>Щотижневі фото- та відеозвіти, доступ для технагляду замовника</li>
+                <li>Поетапна оплата за актами виконаних робіт</li>
+              </ul>
+              <button class="btn btn--primary" type="button" data-open-contact data-request-type="contracting" data-message="Цікавить генпідряд">Обговорити проєкт</button>
+            </div>
+          </div>
+
+          <!-- Suppliers -->
+          <div class="tabs__panel" role="tabpanel" id="panel-supply" aria-labelledby="tab-supply" tabindex="0" hidden>
+            <div class="coop-intro">
+              <h2>Постачальникам</h2>
+              <p class="muted">Відділ постачання розглядає комерційні пропозиції від виробників і дистриб'юторів будівельних матеріалів.</p>
+            </div>
+            <ul class="coop-grid coop-grid--3">
+            <li class="coop-card">
+              <h3 class="coop-card__title">Бетонні суміші та інертні матеріали</h3>
+              <p class="coop-card__text">Цемент, пісок, щебінь, хімічні добавки</p>
+            </li>
+            <li class="coop-card">
+              <h3 class="coop-card__title">Металопрокат</h3>
+              <p class="coop-card__text">Арматура, сітка, закладні деталі</p>
+            </li>
+            <li class="coop-card">
+              <h3 class="coop-card__title">Стінові матеріали</h3>
+              <p class="coop-card__text">Газоблок, цегла, кладкові суміші</p>
+            </li>
+            <li class="coop-card">
+              <h3 class="coop-card__title">Утеплення та фасад</h3>
+              <p class="coop-card__text">Мінеральна вата, штукатурні системи</p>
+            </li>
+            <li class="coop-card">
+              <h3 class="coop-card__title">Вікна та двері</h3>
+              <p class="coop-card__text">Металопластикові вікна, вхідні та протипожежні двері</p>
+            </li>
+            <li class="coop-card">
+              <h3 class="coop-card__title">Інженерне обладнання</h3>
+              <p class="coop-card__text">Котли, ліфти, кабельна продукція, сантехніка</p>
+            </li>
+            </ul>
+            <div class="coop-terms">
+              <h3>Вимоги до постачальників</h3>
+              <ul class="pay-card__list">
+                <li>Сертифікати відповідності та паспорти якості на продукцію</li>
+                <li>Стабільні обсяги та доставка на об'єкти Києва й області</li>
+                <li>Робота з ПДВ, відстрочка платежу — перевага</li>
+                <li>Комерційну пропозицію надсилайте на <a href="mailto:supply@nadiya.example">supply@nadiya.example</a></li>
+              </ul>
+              <button class="btn btn--primary" type="button" data-open-contact data-request-type="supply" data-message="Комерційна пропозиція: ">Надіслати пропозицію</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Form -->
+    <section class="section section--alt cta" aria-labelledby="coop-form-title">
+      <div class="container cta__inner">
+        <div class="cta__text">
+          <span class="eyebrow">Зв'язок</span>
+          <h2 id="coop-form-title">Залиште заявку</h2>
+          <p class="lead">Оберіть тип звернення — заявку отримає відповідний відділ: кадрів, генпідряду чи постачання.</p>
+          <ul class="cta__points">
+            <li>Відділ кадрів: +38 (044) 123-45-70</li>
+            <li>Відділ постачання: +38 (044) 123-45-71</li>
+            <li>Пн–Пт, 9:00–18:00</li>
+          </ul>
+        </div>
+        <div class="cta__form on-dark">
+          <form class="form js-contact-form" novalidate>
+            <div class="form__field">
+              <label class="form__label" for="co-type">Тип звернення</label>
+              <select class="form__input" id="co-type" name="type">
+                <option value="consultation">Консультація в офісі продажу</option>
+                <option value="callback">Зворотний дзвінок</option>
+                <option value="booking">Бронювання квартири</option>
+                <option value="viewing">Перегляд об'єкта</option>
+                <option value="online">Онлайн-консультація</option>
+                <option value="availability">Уточнити наявність квартир</option>
+                <option value="employment" selected>Працевлаштування</option>
+                <option value="contracting">Генпідряд</option>
+                <option value="supply">Постачання матеріалів</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="co-name">Ваше ім'я</label>
+              <input class="form__input" id="co-name" name="name" type="text" autocomplete="name" required placeholder="Олена">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="co-phone">Телефон</label>
+              <input class="form__input" id="co-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__">
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="co-project">Житловий комплекс</label>
+              <select class="form__input" id="co-project" name="project">
+                <option value="">Ще не визначився</option>
+                <option>ЖК «Надія Парк»</option>
+                <option>ЖК «Набережний»</option>
+                <option>ЖК «Сонячна Гавань»</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="co-message">Коментар</label>
+              <textarea class="form__input" id="co-message" name="message" rows="3" placeholder="Ваше запитання або побажання"></textarea>
+            </div>
+            <label class="form__check">
+              <input type="checkbox" name="agree" required checked>
+              <span>Погоджуюсь на обробку персональних даних</span>
+            </label>
+            <button class="btn btn--light btn--block" type="submit">Надіслати заявку</button>
+          </form>
+          <div class="form-success" hidden>
+            <p class="form-success__title">Дякуємо!</p>
+            <p class="muted">Заявку отримано. Ми зв'яжемося з вами найближчим часом.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="logo logo--footer" href="../index.html">
+            <img src="../assets/img/logo.svg" alt="Надія" width="301" height="122" loading="lazy">
+            <span class="logo__caption">Будівельна компанія</span>
+          </a>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Навігація</h2>
+          <ul class="site-footer__list">
+            <li><a href="../index.html">Головна</a></li>
+            <li><a href="about.html">Про компанію</a></li>
+            <li><a href="properties.html">Об'єкти</a></li>
+            <li><a href="apartments.html">Вибір квартири</a></li>
+            <li><a href="cooperation.html">Співпраця</a></li>
+            <li><a href="contacts.html">Контакти</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Відділ продажу</h2>
+          <ul class="site-footer__list">
+            <li><a href="tel:+380441234567">+38 (044) 123-45-67</a></li>
+            <li><a href="mailto:sales@nadiya.example">sales@nadiya.example</a></li>
+            <li>м. Київ, вул. Набережна, 12</li>
+            <li>Пн–Сб, 9:00–19:00</li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Ми в соцмережах</h2>
+          <ul class="site-footer__social">
+            <li><a href="#" aria-label="Facebook">Fb</a></li>
+            <li><a href="#" aria-label="Instagram">Ig</a></li>
+            <li><a href="#" aria-label="YouTube">Yt</a></li>
+            <li><a href="#" aria-label="Telegram">Tg</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>© 2026 ТОВ «Надія Девелопмент». Усі права захищено.</p>
+        <p>Інформація на сайті не є публічною офертою.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Quick-access contact button (every page) -->
+  <button class="fab" type="button" data-open-contact aria-label="Зв'язатися з відділом продажу">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+    <span class="fab__label">Зв'язатися</span>
+  </button>
+
+  <!-- Contact modal -->
+  <div class="modal" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" hidden>
+    <div class="modal__backdrop" data-close-modal></div>
+    <div class="modal__dialog">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрити">×</button>
+      <span class="eyebrow">Відділ продажу</span>
+      <h2 class="modal__title" id="contact-modal-title">Залиште заявку</h2>
+      <p class="muted modal__text">Менеджер зателефонує протягом 15 хвилин у робочий час і відповість на всі запитання.</p>
+      <form class="form js-contact-form" novalidate>
+        <div class="form__field">
+          <label class="form__label" for="cm-type">Тип звернення</label>
+          <select class="form__input" id="cm-type" name="type">
+            <option value="consultation" selected>Консультація в офісі продажу</option>
+            <option value="callback">Зворотний дзвінок</option>
+            <option value="booking">Бронювання квартири</option>
+            <option value="viewing">Перегляд об'єкта</option>
+            <option value="online">Онлайн-консультація</option>
+            <option value="availability">Уточнити наявність квартир</option>
+            <option value="employment">Працевлаштування</option>
+            <option value="contracting">Генпідряд</option>
+            <option value="supply">Постачання матеріалів</option>
+          </select>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="cm-name">Ваше ім'я</label>
+          <input class="form__input" id="cm-name" name="name" type="text" autocomplete="name" required placeholder="Олена">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="cm-phone">Телефон</label>
+          <input class="form__input" id="cm-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__">
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="cm-project">Житловий комплекс</label>
+          <select class="form__input" id="cm-project" name="project">
+            <option value="">Ще не визначився</option>
+            <option>ЖК «Надія Парк»</option>
+            <option>ЖК «Набережний»</option>
+            <option>ЖК «Сонячна Гавань»</option>
+          </select>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="cm-message">Коментар</label>
+          <textarea class="form__input" id="cm-message" name="message" rows="3" placeholder="Ваше запитання або побажання"></textarea>
+        </div>
+        <label class="form__check">
+          <input type="checkbox" name="agree" required checked>
+          <span>Погоджуюсь на обробку персональних даних</span>
+        </label>
+        <button class="btn btn--primary btn--block" type="submit">Надіслати заявку</button>
+      </form>
+      <div class="form-success" hidden>
+        <p class="form-success__title">Дякуємо!</p>
+        <p class="muted">Заявку отримано. Ми зателефонуємо найближчим часом.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

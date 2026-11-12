@@ -11,7 +11,6 @@
   <link rel="stylesheet" href="css/components.css">
   <link rel="stylesheet" href="css/pages.css">
   <script src="js/main.js" defer></script>
-  <script src="js/home.js" defer></script>
 </head>
 <body class="page-home">
   <a class="skip-link" href="#main">Перейти до змісту</a>
@@ -20,6 +19,7 @@
     <div class="container site-header__inner">
       <a class="logo" href="index.html">
         <img src="assets/img/logo.svg" alt="Надія — на головну" width="301" height="122">
+        <span class="logo__caption">Будівельна компанія</span>
       </a>
 
       <nav class="main-nav" id="main-nav" aria-label="Головне меню">
@@ -28,6 +28,7 @@
           <li><a class="main-nav__link" href="html/about.html">Про компанію</a></li>
           <li><a class="main-nav__link" href="html/properties.html">Об'єкти</a></li>
           <li><a class="main-nav__link" href="html/apartments.html">Вибір квартири</a></li>
+          <li><a class="main-nav__link" href="html/cooperation.html">Співпраця</a></li>
           <li><a class="main-nav__link" href="html/contacts.html">Контакти</a></li>
         </ul>
         <div class="main-nav__extra">
@@ -63,21 +64,19 @@
           <button class="btn btn--outline-light" type="button" data-open-contact data-request-type="consultation">Консультація</button>
         </div>
       </div>
-      <button class="hero__toggle" type="button" aria-pressed="false" aria-label="Пауза відео">
-        <span class="hero__toggle-icon" aria-hidden="true"></span>
-      </button>
-      <a class="hero__scroll" href="#stats" aria-label="Гортати далі"></a>
     </section>
 
     <!-- Company in numbers -->
     <section class="section stats" id="stats" aria-labelledby="stats-title">
       <div class="container">
         <h2 class="visually-hidden" id="stats-title">Компанія в цифрах</h2>
-        <ul class="stats__list">
+        <ul class="stats__list stats__list--6">
           <li class="stats__item"><span class="stats__value">16</span><span class="stats__label">років на ринку</span></li>
-          <li class="stats__item"><span class="stats__value">24</span><span class="stats__label">зданих будинки</span></li>
+          <li class="stats__item"><span class="stats__value">24</span><span class="stats__label">здані будинки</span></li>
+          <li class="stats__item"><span class="stats__value">3</span><span class="stats__label">ЖК в будівництві</span></li>
           <li class="stats__item"><span class="stats__value">380<small> тис.</small></span><span class="stats__label">м² введено в експлуатацію</span></li>
           <li class="stats__item"><span class="stats__value">5 200+</span><span class="stats__label">родин уже вдома</span></li>
+          <li class="stats__item"><span class="stats__value">420</span><span class="stats__label">працівників у штаті</span></li>
         </ul>
       </div>
     </section>
@@ -258,6 +257,20 @@
         <div class="cta__form on-dark">
           <form class="form js-contact-form" novalidate>
             <div class="form__field">
+              <label class="form__label" for="cta-type">Тип звернення</label>
+              <select class="form__input" id="cta-type" name="type">
+                <option value="consultation" selected>Консультація в офісі продажу</option>
+                <option value="callback">Зворотний дзвінок</option>
+                <option value="booking">Бронювання квартири</option>
+                <option value="viewing">Перегляд об'єкта</option>
+                <option value="online">Онлайн-консультація</option>
+                <option value="availability">Уточнити наявність квартир</option>
+                <option value="employment">Працевлаштування</option>
+                <option value="contracting">Генпідряд</option>
+                <option value="supply">Постачання матеріалів</option>
+              </select>
+            </div>
+            <div class="form__field">
               <label class="form__label" for="cta-name">Ваше ім'я</label>
               <input class="form__input" id="cta-name" name="name" type="text" autocomplete="name" required placeholder="Олена">
             </div>
@@ -265,11 +278,24 @@
               <label class="form__label" for="cta-phone">Телефон</label>
               <input class="form__input" id="cta-phone" name="phone" type="tel" autocomplete="tel" required placeholder="+38 (0__) ___-__-__">
             </div>
+            <div class="form__field">
+              <label class="form__label" for="cta-project">Житловий комплекс</label>
+              <select class="form__input" id="cta-project" name="project">
+                <option value="">Ще не визначився</option>
+                <option>ЖК «Надія Парк»</option>
+                <option>ЖК «Набережний»</option>
+                <option>ЖК «Сонячна Гавань»</option>
+              </select>
+            </div>
+            <div class="form__field">
+              <label class="form__label" for="cta-message">Коментар</label>
+              <textarea class="form__input" id="cta-message" name="message" rows="3" placeholder="Ваше запитання або побажання"></textarea>
+            </div>
             <label class="form__check">
               <input type="checkbox" name="agree" required checked>
               <span>Погоджуюсь на обробку персональних даних</span>
             </label>
-            <button class="btn btn--light btn--block" type="submit">Отримати консультацію</button>
+            <button class="btn btn--light btn--block" type="submit">Надіслати заявку</button>
           </form>
           <div class="form-success" hidden>
             <p class="form-success__title">Дякуємо!</p>
@@ -286,8 +312,8 @@
         <div class="site-footer__brand">
           <a class="logo logo--footer" href="index.html">
             <img src="assets/img/logo.svg" alt="Надія" width="301" height="122" loading="lazy">
+            <span class="logo__caption">Будівельна компанія</span>
           </a>
-          <p>Будуємо житло, в якому хочеться жити. З 2010 року на ринку, 24 здані будинки. <a class="site-footer__more" href="html/about.html">Більше про нас</a></p>
         </div>
         <div>
           <h2 class="site-footer__title">Навігація</h2>
@@ -296,6 +322,7 @@
             <li><a href="html/about.html">Про компанію</a></li>
             <li><a href="html/properties.html">Об'єкти</a></li>
             <li><a href="html/apartments.html">Вибір квартири</a></li>
+            <li><a href="html/cooperation.html">Співпраця</a></li>
             <li><a href="html/contacts.html">Контакти</a></li>
           </ul>
         </div>
@@ -340,17 +367,20 @@
       <h2 class="modal__title" id="contact-modal-title">Залиште заявку</h2>
       <p class="muted modal__text">Менеджер зателефонує протягом 15 хвилин у робочий час і відповість на всі запитання.</p>
       <form class="form js-contact-form" novalidate>
-        <fieldset class="filters__group request-types">
-          <legend class="form__label">Тип звернення</legend>
-          <div class="chips">
-            <label class="chip-check"><input type="radio" name="type" value="consultation" checked><span>Консультація в офісі</span></label>
-            <label class="chip-check"><input type="radio" name="type" value="callback"><span>Зворотний дзвінок</span></label>
-            <label class="chip-check"><input type="radio" name="type" value="booking"><span>Бронювання</span></label>
-            <label class="chip-check"><input type="radio" name="type" value="viewing"><span>Перегляд об'єкта</span></label>
-            <label class="chip-check"><input type="radio" name="type" value="online"><span>Онлайн-консультація</span></label>
-            <label class="chip-check"><input type="radio" name="type" value="availability"><span>Уточнити наявність</span></label>
-          </div>
-        </fieldset>
+        <div class="form__field">
+          <label class="form__label" for="cm-type">Тип звернення</label>
+          <select class="form__input" id="cm-type" name="type">
+            <option value="consultation" selected>Консультація в офісі продажу</option>
+            <option value="callback">Зворотний дзвінок</option>
+            <option value="booking">Бронювання квартири</option>
+            <option value="viewing">Перегляд об'єкта</option>
+            <option value="online">Онлайн-консультація</option>
+            <option value="availability">Уточнити наявність квартир</option>
+            <option value="employment">Працевлаштування</option>
+            <option value="contracting">Генпідряд</option>
+            <option value="supply">Постачання матеріалів</option>
+          </select>
+        </div>
         <div class="form__field">
           <label class="form__label" for="cm-name">Ваше ім'я</label>
           <input class="form__input" id="cm-name" name="name" type="text" autocomplete="name" required placeholder="Олена">
@@ -370,7 +400,7 @@
         </div>
         <div class="form__field">
           <label class="form__label" for="cm-message">Коментар</label>
-          <textarea class="form__input" id="cm-message" name="message" rows="3" placeholder="Наприклад: цікавить 2-кімнатна до 3 млн грн"></textarea>
+          <textarea class="form__input" id="cm-message" name="message" rows="3" placeholder="Ваше запитання або побажання"></textarea>
         </div>
         <label class="form__check">
           <input type="checkbox" name="agree" required checked>
