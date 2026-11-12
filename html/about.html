@@ -373,6 +373,17 @@
       <h2 class="modal__title" id="contact-modal-title">Залиште заявку</h2>
       <p class="muted modal__text">Менеджер зателефонує протягом 15 хвилин у робочий час і відповість на всі запитання.</p>
       <form class="form js-contact-form" novalidate>
+        <fieldset class="filters__group request-types">
+          <legend class="form__label">Тип звернення</legend>
+          <div class="chips">
+            <label class="chip-check"><input type="radio" name="type" value="consultation" checked><span>Консультація в офісі</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="callback"><span>Зворотний дзвінок</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="booking"><span>Бронювання</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="viewing"><span>Перегляд об'єкта</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="online"><span>Онлайн-консультація</span></label>
+            <label class="chip-check"><input type="radio" name="type" value="availability"><span>Уточнити наявність</span></label>
+          </div>
+        </fieldset>
         <div class="form__field">
           <label class="form__label" for="cm-name">Ваше ім'я</label>
           <input class="form__input" id="cm-name" name="name" type="text" autocomplete="name" required placeholder="Олена">

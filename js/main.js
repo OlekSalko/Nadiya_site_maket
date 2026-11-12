@@ -69,7 +69,7 @@
     modal.hidden = false;
     active = modal;
     document.body.classList.add('is-locked');
-    var first = modal.querySelector('.modal__dialog input, .modal__dialog select, .modal__dialog button:not(.modal__close)') ||
+    var first = modal.querySelector('.modal__dialog input:not([type="radio"]):not([type="checkbox"]), .modal__dialog select, .modal__dialog button:not(.modal__close)') ||
       modal.querySelector(FOCUSABLE);
     if (first) first.focus();
   }
@@ -92,6 +92,10 @@
       var msg = openContact.getAttribute('data-message');
       var textarea = document.getElementById('cm-message');
       if (msg && textarea) textarea.value = msg;
+      // Request type: preselect from the trigger (e.g. "booking"), else default
+      var type = openContact.getAttribute('data-request-type') || 'consultation';
+      var radio = document.querySelector('#contact-modal input[name="type"][value="' + type + '"]');
+      if (radio) radio.checked = true;
       resetForm(document.querySelector('#contact-modal .js-contact-form'));
       openModal('contact-modal', openContact);
       return;

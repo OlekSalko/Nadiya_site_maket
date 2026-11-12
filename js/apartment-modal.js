@@ -62,6 +62,7 @@
     cta.setAttribute('data-message', 'Цікавить квартира № ' + apt.number + ' (' + apt.section + ', ' + apt.floor +
       ' поверх, ' + D.formatArea(apt.area) + ')');
     cta.textContent = apt.status === 'free' ? 'Забронювати квартиру' : 'Стати в чергу на квартиру';
+    cta.setAttribute('data-request-type', apt.status === 'free' ? 'booking' : 'availability');
 
     window.Nadiya.openModal('apartment-modal', trigger);
   }
